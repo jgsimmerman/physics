@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+
+\title{Toward Emergent Fermionic Excitations in Nonlinear Electrodynamics: A Pleba\'{n}ski-Mapped Born--Infeld Framework}
+\author{Jacob Glenn Simmerman}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper provides a mathematically structured route by which a purely electromagnetic origin for massive fermionic excitations could be consistent with macroscopic gravity and quantum statistics. Utilizing a Pleba\'{n}ski-mapped tensor formulation of the Polarizable Vacuum framework, we analyze the structural constraints governing finite-energy topological solitons (Hopfions) governed by the Born--Infeld action. We demonstrate that while Born--Infeld non-linearities soften the Maxwell collapse divergence under the same scaling family, the purely static magnetic sector cannot furnish a global energy minimum. The absence of a finite-size global energetic minimum over the uniform-dilation family in the static magnetic sector therefore establishes that any globally stable finite-size configuration must rely on structure absent from that sector---potentially including electric fields, momentum density, or genuinely time-dependent dynamics---without implying that such structure is sufficient to produce a stable solution. The existence of a localized topological solution, its finite invariant mass, and its fermionic quantization are treated as separate conditional requirements rather than as consequences of topology alone. Assuming the Born--Infeld Hopfion Existence Conjecture holds for the full dynamic action, we show that standard macroscopic transport formalisms, specifically the pole-dipole Mathisson-Papapetrou-Dixon equations, permit a standard gravitational monopole limit consistent with the Weak Equivalence Principle. Furthermore, under the stated symmetry and configuration-space topology conditions, Finkelstein-Rubinstein quantization permits half-integer spin and fermionic exchange statistics, providing a structural pathway toward emergent fermions from bosonic electromagnetic precursors.
+\end{abstract}
+
+\section{Introduction}
+The pursuit of a purely electromagnetic mass model has historically encountered insurmountable obstacles, most notably the infinite self-energy of the point charge and the Derrick scaling obstruction for finite-size solitons in linear gauge theories \cite{Derrick1964}. While Born--Infeld (BI) theory \cite{Born1934} removes the central singularity, demonstrating that a stable, finite-energy topological soliton can dynamically exist without spontaneous symmetry breaking remains a severe open problem in mathematical physics.
+
+This paper does not claim to have solved the global minimization problem for the Born--Infeld action. Instead, it constructs a conditional kinematic chain. We map the invariant structure of the BI action to an effective macroscopic transport medium via the Pleba\'{n}ski tensor framework \cite{Plebanski1960}. By isolating the static magnetic sector, we mathematically prove that it has no finite-size global energetic minimum over a uniform dilation scaling family, thereby demonstrating that any stable topological soliton must fundamentally rely on structures beyond the static magnetic limit. We formalize the rigorous boundary separating known physics from unproved mathematics as the Born--Infeld Hopfion Existence Conjecture. Contingent upon this conjecture, we demonstrate that such a confined electromagnetic topology natively permits a standard gravitational monopole limit consistent with the Weak Equivalence Principle (via the pole-dipole transport equations) and permits fermionic spin and exchange statistics (via Finkelstein-Rubinstein quantization).
+
+\section{Constitutive Relations and Determinant Mapping}
+In the Pleba\'{n}ski framework, background gravity is encoded as an effective optical metric tensor density. The Pleba\'{n}ski construction supplies the metric-induced linear constitutive tensor density explicitly:
+\begin{equation}
+\chi^{\mu\nu\alpha\beta} = \sqrt{-g} \left(g^{\mu\alpha}g^{\nu\beta} - g^{\mu\beta}g^{\nu\alpha}\right)
+\end{equation}
+
+The standard covariant Born--Infeld Lagrangian density in a curved spacetime with metric $g_{\mu\nu}$ is defined via the determinant of the matrix sum of the metric and the Faraday tensor:
+\begin{equation}
+\mathcal{L}_{\text{BI}} = -b^2 \left(\sqrt{-\det(g_{\mu\nu} + b^{-1}F_{\mu\nu})} - \sqrt{-\det(g_{\mu\nu})}\right)
+\end{equation}
+
+We adopt the standard metric signature and define the two independent electromagnetic scalar invariants:
+\begin{equation}
+\mathcal{F} = \frac{1}{4} F_{\mu\nu}F^{\mu\nu}, \quad \mathcal{G} = \frac{1}{4} F_{\mu\nu}\tilde{F}^{\mu\nu}
+\end{equation}
+
+The determinant expands algebraically, allowing the Lagrangian density to be written in its exact invariant-dependent form:
+\begin{equation}
+\mathcal{L}_{\text{BI}} = -b^2 \sqrt{-g} \left(\sqrt{1 + \frac{2\mathcal{F}}{b^2} - \frac{\mathcal{G}^2}{b^4}} - 1\right)
+\end{equation}
+
+The Pleba\'{n}ski construction supplies the metric-induced linear constitutive tensor density, while the Born--Infeld theory replaces the linear excitation relation by the nonlinear constitutive response $P^{\mu\nu}$ obtained by differentiating the BI Lagrangian with respect to $F_{\mu\nu}$:
+\begin{equation}
+P^{\mu\nu} \equiv -2\frac{\partial \mathcal{L}_{\text{BI}}}{\partial F_{\mu\nu}} = \sqrt{-g} \frac{F^{\mu\nu} - b^{-2}\mathcal{G}\tilde{F}^{\mu\nu}}{\sqrt{1 + \frac{2\mathcal{F}}{b^2} - \frac{\mathcal{G}^2}{b^4}}}
+\end{equation}
+
+Because $P^{\mu\nu}$ contains the density weight $\sqrt{-g}$, the source-free Euler-Lagrange field equations take the form:
+\begin{equation}
+\partial_\mu P^{\mu\nu} = 0, \quad \nabla_{[\mu} F_{\nu\rho]} = 0
+\end{equation}
+
+Thus, the flat-space representation is a constitutive reformulation where the background geometry acts through $\chi^{\mu\nu\alpha\beta}$ and field saturation is governed by the nonlinear constitutive response $P^{\mu\nu}$, rather than replacing the physical BI metric by a density-valued scalar metric. This establishes a rigorous structural correspondence between the curved-spacetime field theory and the effective anisotropic medium for macroscopic transport and wave propagation, rather than an assertion that physical spacetime is intrinsically constituted by this medium.
+
+\section{Dilation Scaling and the Static Magnetic Sector}
+To support a finite rest mass $M_0 > 0$, the topologically confined field must resist expansion and collapse. For the corresponding Maxwell scaling family, the energy diverges as $\lambda^{-1}$ under collapse. To examine whether Born--Infeld (BI) nonlinearities remove this scaling obstruction and stabilize the soliton, we first test a reduced static configuration in the purely magnetic sector.
+
+Setting the electric field $\mathbf{E}=0$ dictates that the topological invariant $\mathcal{G} = 0$, and the energy density reduces to the magnetic sector. Evaluated in the asymptotically flat vacuum sector where topological self-confinement must intrinsically hold prior to gravitational interactions, the functional reduces to:
+\begin{equation}
+E[\mathbf{A}] = b^2 \int_{\mathbb{R}^3} \left(\sqrt{1 + \frac{\mathbf{B}^2}{b^2}} - 1\right) d^3x
+\end{equation}
+
+Subjecting the spatial configuration to a uniform dilation $\mathbf{r} \to \lambda \mathbf{r}$, the gauge potentials and fields scale as $\mathbf{A}_\lambda(\mathbf{r}) = \lambda^{-1} \mathbf{A}(\mathbf{r}/\lambda)$ and $\mathbf{B}_\lambda^2(\mathbf{r}) = \lambda^{-4} \mathbf{B}^2(\mathbf{r}/\lambda)$ to preserve the magnetic helicity $H_B = \int \mathbf{A} \cdot \mathbf{B} \, d^3x$, which under the appropriate compactification and normalization represents the Hopf invariant of the knotted field configuration. The dilated energy functional becomes:
+\begin{equation}
+E(\lambda) = b^2 \lambda^3 \int_{\mathbb{R}^3} \left(\sqrt{1 + \frac{\mathbf{B}^2(\mathbf{r}')}{\lambda^4 b^2}} - 1\right) d^3r'
+\end{equation}
+
+Analyzing the asymptotic limits yields:
+\begin{itemize}
+    \item \textbf{Expansion ($\lambda \to \infty$):} Weak-field limit ($\lambda^{-4} \ll b^2$). Taylor expansion yields $1 + \mathbf{B}^2 / (2\lambda^4 b^2)$. Integrating with the $\lambda^3$ measure, we recover Maxwellian dissipation: $E(\lambda) \propto \lambda^{-1}$.
+    \item \textbf{Collapse ($\lambda \to 0$):} Strong-field core ($\lambda^{-4} \gg b^2$). The square root is dominated by $\lambda^{-2}|\mathbf{B}|/b$. Integrating with the $\lambda^3$ measure, the energy scales as $E(\lambda) \propto \lambda^1$.
+\end{itemize}
+
+The exact asymptotic limits are:
+\begin{equation}
+\lim_{\lambda\to 0} E(\lambda) = 0, \quad \lim_{\lambda\to\infty} E(\lambda) = 0
+\end{equation}
+
+Because the integrand is strictly positive for all finite $\lambda$, $E(\lambda) > 0$. Thus $E(\lambda)$ has infimum zero at the boundaries of the scaling family:
+\begin{equation}
+\inf_{\lambda > 0} E[\mathbf{A}_\lambda] = 0
+\end{equation}
+
+Consequently, no nontrivial configuration in a fixed Hopf sector can be a global minimizer of the purely magnetic BI energy over this dilation-invariant configuration class: the dilation family preserves the Hopf invariant while its energy has infimum zero. This establishes the failure of global static energetic confinement, rather than ruling out every possible stationary solution. While Born--Infeld nonlinearity softens the Maxwell collapse divergence, this reduced static magnetic sector cannot furnish the required finite-size massive Hopfion; any finite-size global minimizer in the full theory must involve structure absent from this sector.
+
+\section{Macroscopic Transport and the Weak Equivalence Principle}
+Assuming the existence of a confined, dynamic bound state (as formalized in Section 5), its interaction with a background gravitational field can be treated macroscopically. The soliton represents an extended, localized distribution of stress-energy traversing the effective dielectric metric.
+
+Within the Mathisson-Papapetrou-Dixon (MPD) description of an isolated body in a gravitational background \cite{Mathisson1937, Papapetrou1951, Dixon1970}, the kinematics of this extended body detail the transport of multipole moments of the stress-energy tensor along a trajectory. Assuming stress-energy conservation and a background metric \cite{Wald1984}, the pole-dipole MPD momentum equation is:
+\begin{equation}
+\frac{dP^\mu}{ds} + \Gamma^\mu_{\alpha\beta} u^\alpha P^\beta = -\frac{1}{2} R^\mu{}_{\nu\alpha\beta} u^\nu S^{\alpha\beta}
+\end{equation}
+
+At monopole order, the center-of-mass trajectory is geodesic with respect to the background metric and is independent of the object's internal constitution. Finite-size corrections arise at dipole and higher multipole order, including spin-curvature and tidal couplings. Thus the construction is consistent with the Weak Equivalence Principle in the point-particle limit, rather than providing an exact statement of geodesic motion for an extended body. 
+
+Within the pole-dipole/higher-multipole description of an isolated body in a gravitational background, deviations from monopole geodesic motion arise from spin-curvature and higher-multipole couplings to the Riemann curvature tensor. The characteristic dimensionless scale of the dipole correction is $\lambda_C / r$, giving an order-of-magnitude estimate of $\sim 10^{-20}$ for an electron-scale Compton wavelength versus an Earth-scale curvature length, confirming that these deviations remain deeply sub-dominant at non-relativistic macroscopic scales.
+
+\section{The Born--Infeld Hopfion Existence Conjecture}
+The genuine model-specific claim---that an electromagnetic field can dynamically form an object with this exact finite mass, size, and symmetry---is entirely contingent upon unsolved pure mathematics.
+
+As demonstrated in Section 3, the static magnetic sector drives energy to zero under scaling, proving that any viable localized solution must involve structure absent from the purely static magnetic sector, plausibly including the electric field, momentum density, or genuinely time-dependent/null dynamics. The fundamental open problem is whether the full BI nonlinearity admits a finite-energy, topologically nontrivial, localized dynamical solution whose time-averaged properties can support a massive rest-frame sector. We formalize this boundary as the Born--Infeld Hopfion Existence Conjecture, which requires establishing five core conditions:
+
+\begin{enumerate}
+    \item \textbf{Dynamical Topological Conservation:} The relevant magnetic-helicity or Hopf-type quantity must be shown to be conserved under the full BI evolution, and the resulting level sets must be analyzed to determine whether they define disconnected sectors of the physical phase/configuration space.
+    \item \textbf{Existence of a Dynamic Soliton \& Mass Gap:} The full dynamical BI action admits a finite-energy, localized, dynamically stable critical point or constrained minimizer possessing a stationary or periodic rest-frame description with a finite invariant mass $M_0 > 0$.
+    \item \textbf{Topological Coercivity and Concentration-Compactness:} A dynamic coercivity functional bound prevents energetic collapse, and strict sub-additivity ($E(Q_1 + Q_2) < E(Q_1) + E(Q_2)$) together with appropriate coercivity and exclusion of vanishing rules out dichotomy (fragmentation), providing the key compactness input needed to obtain a solitary minimizer (modulo spatial translations).
+    \item \textbf{Preservation of Symmetry:} The relevant dynamically stable solution preserves the required $D_{\infty h}$ spatial symmetry (with a well-defined group action on the electromagnetic variables) without spontaneous symmetry breaking.
+    \item \textbf{Configuration-Space Correspondence:} A homotopy-preserving identification or comparison map must be established between the relevant Born--Infeld electromagnetic soliton sector and the corresponding Faddeev-Hopf configuration space \cite{Faddeev1997, Ranada1989}, sufficient to transfer the Finkelstein-Rubinstein construction.
+\end{enumerate}
+
+\section{Topological Spin and Emergent Fermionic Statistics}
+If the Existence Conjecture holds, the resultant finite-energy solitary wave possesses a topologically nontrivial field configuration. Within the relevant $H=1$ sector, internal structural symmetry dictates how the field responds to spatial rotations.
+
+The known Finkelstein-Rubinstein (FR) results for Faddeev-Hopf solitons \cite{Finkelstein1968} establish the topological mechanism for fermionic statistics, but their direct application here requires an explicit identification---or an appropriate homotopy equivalence---between the relevant Born--Infeld electromagnetic configuration space and the configuration space used in Faddeev-Hopf analysis.
+
+Crucially, this response depends on the fundamental group of that configuration component and on the homotopy class of the physical spatial loops. If the physical configuration space has the required nontrivial fundamental group, and provided the true global minimizer preserves the strict $D_{\infty h}$ symmetry, the FR topological quantization framework applies. In this specific scenario, if the physical $2\pi$ rotation represents a non-contractible loop in the $H=1$ configuration-space component, the nontrivial FR representation assigns a $-1$ phase to the wavefunction under that $2\pi$ loop.
+
+Under the condition that the $D_{\infty h}$ symmetry remains unbroken, and provided the physical $2\pi$-rotation and exchange loops represent the nontrivial element of the relevant configuration-space homotopy, the nontrivial FR representation permits half-integer angular momentum and fermionic exchange statistics. Consequently, the macroscopic field object, constructed entirely from integer-spin bosonic fields (photons), would conditionally transform as a spinor under spatial rotations. Fermionic quantization permits half-integer angular momentum, but does not by itself establish that the lowest-energy ground state has $J = 1/2$; that requires a separate spectral and collective-coordinate analysis of the soliton's rotational zero modes.
+
+\section{Conclusion}
+This framework provides a mathematically structured route by which a purely electromagnetic origin for massive fermionic excitations could be consistent with macroscopic gravity and quantum statistics, provided the underlying electrodynamic action permits stable topological solitons. By utilizing a Pleba\'{n}ski-mapped tensor framework, we mapped the non-linear Born--Infeld action into an effective optical medium while keeping metric geometry and nonlinear excitation cleanly separated. Crucially, proving that the static magnetic sector has no finite-size global energetic minimum over a uniform dilation family reveals that any valid finite-energy configuration must involve dynamics beyond the static magnetic limit. 
+
+Contingent upon the mathematically rigorous proof of the Born--Infeld Hopfion Existence Conjecture---which requires establishing dynamical topological conservation, the existence of a dynamic soliton, coercivity, concentration-compactness, configuration-space correspondence, and absence of spontaneous symmetry breaking---the resulting macroscopic object is consistent with the Weak Equivalence Principle in the point-particle limit via the pole-dipole transport equations and permits half-integer spin and fermionic exchange statistics via Finkelstein-Rubinstein topological quantization. The fundamental properties of mass, gravity, and spin can therefore be conditionally generated from classical, non-linear electromagnetic fields.
+
+\begin{thebibliography}{99}
+
+\bibitem{Born1934}
+Born, M., \& Infeld, L. (1934). Foundations of the new field theory. \textit{Proceedings of the Royal Society of London. Series A}, 144(852), 425-451.
+
+\bibitem{Derrick1964}
+Derrick, G. H. (1964). Comments on nonlinear wave equations as models for elementary particles. \textit{Journal of Mathematical Physics}, 5(9), 1252-1254.
+
+\bibitem{Dixon1970}
+Dixon, W. G. (1970). Dynamics of extended bodies in general relativity. I. Momentum and angular momentum. \textit{Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences}, 314(1519), 499-527.
+
+\bibitem{Faddeev1997}
+Faddeev, L., \& Niemi, A. J. (1997). Knots and particles. \textit{Nature}, 387(6628), 58-61.
+
+\bibitem{Finkelstein1968}
+Finkelstein, D., \& Rubinstein, J. (1968). Connection between spin, statistics, and kinks. \textit{Journal of Mathematical Physics}, 9(11), 1762-1779.
+
+\bibitem{Mathisson1937}
+Mathisson, M. (1937). Neue mechanik materieller systemes. \textit{Acta Physica Polonica}, 6, 163-200.
+
+\bibitem{Papapetrou1951}
+Papapetrou, A. (1951). Spinning test-particles in general relativity. I. \textit{Proceedings of the Royal Society of London. Series A}, 209(1097), 248-258.
+
+\bibitem{Plebanski1960}
+Pleba\'{n}ski, J. (1960). Electromagnetic waves in gravitational fields. \textit{Physical Review}, 118(5), 1396.
+
+\bibitem{Ranada1989}
+Ra\~{n}ada, A. F. (1989). Topological electromagnetism. \textit{Journal of Physics A: Mathematical and General}, 22(13), L515.
+
+\bibitem{Wald1984}
+Wald, R. M. (1984). \textit{General relativity}. University of Chicago press.
+
+\end{thebibliography}
+
+\end{document}
