@@ -1,0 +1,388 @@
+# Tensor Polarizable Vacuum as a Constitutive Representation of General Relativity: Perfect-Fluid Equivalence and Neutron-Star Tests
+
+## Abstract
+
+We investigate a tensor polarizable vacuum (cTPV) formulation in which vacuum polarization is interpreted not as a field propagating on spacetime but as a constitutive state of spacetime itself. The construction is motivated by earlier polarizable-vacuum representations of gravitation, while replacing a scalar refractive-index description with a covariant algebraic constitutive deformation. For an isotropic perfect fluid, the deformation possesses one timelike and three degenerate spatial eigenvalues and maps the microscopic matter variables \((\epsilon,p)\) to effective variables \((\epsilon_q,p_q)\) that source an Einstein metric \(q_{\mu\nu}\). We show that whenever the constitutive polarization is algebraically slaved to a cold barotropic equation of state, the complete equilibrium and linear polar-perturbation problem is exactly reducible to general relativity coupled to the apparent equation of state \(p_q(\epsilon_q)\). Consequently, large differences relative to GR evaluated with the original microscopic equation of state do not constitute invariant evidence for modified gravity.
+
+We test the construction with smooth generalized piecewise-polytropic neutron-star equations of state and relativistic stellar oscillations. The reconstructed \(1.4\,M_\odot\) SLy4 model has radius \(11.573\) km and maximum scalar polarization \(\pi_{\max}=6.47\times10^{-3}\). In the relativistic Cowling approximation, the GR, background-only, and fully constitutive models give \(f\)-mode frequencies \(2428.4\), \(2442.5\), and \(2443.2\) Hz, respectively, whereas the corresponding \(p_1\) frequencies are \(6912.2\), \(6964.7\), and \(6910.2\) Hz. The large background and constitutive contributions to \(p_1\) nearly cancel. This behavior is numerically nontrivial but remains compatible with exact GR evolution of the effective barotropic fluid. The standard Lindblom–Detweiler polar system likewise depends only on the equilibrium variables and the adiabatic derivative \(dp_q/d\epsilon_q\).
+
+We therefore conclude that the isotropic algebraic cTPV model provides a controlled constitutive interpretation of general relativity but does not define an observationally distinct classical gravity theory in the perfect-fluid stellar sector. We identify the minimal extension required to evade this equivalence: a trace-free tensor polarization producing effective anisotropic stress. Such a sector can preserve the GR vacuum limit and avoid additional gravitational degrees of freedom if the tensor polarization is algebraically related to shear strain rather than endowed with an independent kinetic term. This points to relativistic elasticity, axial torsional modes, and tensorial stellar response as the natural next tests of a physically active tensor polarizable vacuum.
+
+**Keywords:** general relativity; polarizable vacuum; constitutive gravity; neutron stars; quasinormal modes; relativistic elasticity; anisotropic stress
+
+## 1. Introduction
+
+General relativity ordinarily describes gravitation geometrically: matter and radiation determine spacetime curvature through Einstein's equations, while freely falling matter follows the resulting geometry. Alternative representations have long explored whether the same physics can be understood in constitutive or medium-like language. Early polarizable-vacuum approaches treated gravitational phenomena in terms of a vacuum with variable electromagnetic constitutive properties, motivated in part by the correspondence between Maxwell theory in curved spacetime and electrodynamics in material media.
+
+The approach considered here differs in an important respect. The tensor polarizable vacuum is not an additional medium placed on top of spacetime. The polarization variables characterize the constitutive state of spacetime itself. Geometry remains dynamical, and the objective is to provide a material-like interpretation of that geometry while retaining covariance and the empirical vacuum limit of GR.
+
+A natural question follows. A constitutive reformulation may be mathematically nontrivial yet observationally equivalent to GR after a redefinition of the matter variables. Analogous Einstein-frame mappings are known in broad classes of nonlinear metric-affine theories: nonlinear gravitational dynamics can often be written as Einstein equations for an auxiliary metric sourced by correspondingly nonlinear effective matter. An observationally new theory therefore requires more than a modified mass-radius relation or a shifted stellar oscillation frequency. It must contain a relation among observables that cannot be reproduced by GR after the allowed redefinition of matter.
+
+This paper develops that test explicitly for an algebraic isotropic cTPV model.
+
+## 2. Isotropic tensor-polarization map
+
+Let \(u^\mu\) denote the unit four-velocity of matter and let the constitutive deformation be
+
+\[
+{\Sigma^\mu}_\nu
+=
+(1+\pi){\delta^\mu}_\nu
++
+4\pi u^\mu u_\nu ,
+\]
+
+where \(\pi\) is a dimensionless scalar describing the isotropic polarization state.
+
+In the comoving frame the eigenvalues are
+
+\[
+\lambda_t=1-3\pi,
+\qquad
+\lambda_s=1+\pi
+\]
+
+with threefold degeneracy in the spatial sector. Hence
+
+\[
+\Delta_\Sigma
+=
+\det\Sigma
+=
+(1-3\pi)(1+\pi)^3,
+\]
+
+and we define
+
+\[
+J=\sqrt{\Delta_\Sigma}.
+\]
+
+For the realization used in the neutron-star calculations, the effective variables sourcing the Einstein metric \(q_{\mu\nu}\) take the algebraic form
+
+\[
+\epsilon_q
+=
+\frac{\epsilon+A\,U(\pi)}{J},
+\]
+
+\[
+p_q
+=
+\frac{p-A\,U(\pi)}{J},
+\]
+
+where \(U\) is a constitutive potential and \(A\) fixes its scale.
+
+The polarization is not assigned an independent wave equation. Instead it satisfies an algebraic closure,
+
+\[
+F(\pi,\epsilon,p)=0.
+\]
+
+A representative realization employed in the numerical calculations is
+
+\[
+F=
+\Lambda_Q^2
+\left[
+(1-2\pi-3\pi^2)U_{,\pi}
++
+6\pi U
+\right]
+-
+3K\Gamma
+\left[
+(1-\pi)\epsilon
++
+(1+3\pi)p
+\right].
+\]
+
+The gate \(\Gamma\) suppresses the constitutive response outside the matter regime of interest. On the healthy branch,
+
+\[
+1-3\pi>0,
+\qquad
+1+\pi>0,
+\qquad
+F_{,\pi}\neq0,
+\]
+
+so the implicit-function theorem gives a unique local constitutive solution.
+
+The conceptual interpretation is that \(\pi\) is not an additional field propagating through the vacuum. It labels the local isotropic constitutive state of the spacetime medium.
+
+## 3. Effective-EOS theorem for a barotropic perfect fluid
+
+Consider microscopic matter satisfying
+
+\[
+p=p(\epsilon).
+\]
+
+Because \(F=0\) determines
+
+\[
+\pi=\pi(\epsilon)
+\]
+
+on the selected constitutive branch, both effective variables become one-parameter functions,
+
+\[
+\epsilon_q=\epsilon_q(\epsilon),
+\qquad
+p_q=p_q(\epsilon).
+\]
+
+Whenever \(d\epsilon_q/d\epsilon\neq0\), the parameter \(\epsilon\) can be eliminated, yielding a single effective barotropic relation
+
+\[
+\boxed{
+p_q=p_q(\epsilon_q).
+}
+\]
+
+The result extends to the perturbative response.
+
+Differentiating the closure gives
+
+\[
+F_{,\pi}\,d\pi
++
+F_{,\epsilon}\,d\epsilon
++
+F_{,p}\,dp=0.
+\]
+
+For adiabatic perturbations,
+
+\[
+dp=c_s^2\,d\epsilon ,
+\]
+
+and therefore
+
+\[
+\frac{d\pi}{d\epsilon}
+=
+-
+\frac{
+F_{,\epsilon}+c_s^2 F_{,p}
+}{
+F_{,\pi}
+}.
+\]
+
+The effective adiabatic speed is
+
+\[
+c_{q,\mathrm{ad}}^2
+=
+\frac{dp_q}{d\epsilon_q}
+=
+\frac{
+dp_q/d\epsilon
+}{
+d\epsilon_q/d\epsilon
+}.
+\]
+
+Thus the complete constitutive derivative appearing in the perturbation equations is exactly the derivative of the apparent EOS.
+
+This establishes the central result:
+
+\[
+\boxed{
+\text{barotropic perfect-fluid cTPV}
+\equiv
+\text{GR with the effective EOS }p_q(\epsilon_q)
+}
+\]
+
+within the sector considered.
+
+The result is closely related in spirit to Einstein-frame correspondences in Ricci-based metric-affine gravity, where algebraic gravitational modifications can be represented as GR coupled to transformed matter.
+
+The reason is algebraic. The deformation tensor contains only \(u^\mu u_\nu\) and the identity. It cannot generate a spatial trace-free stress tensor. The effective source remains
+
+\[
+T_{\mu\nu}^{(q)}
+=
+(\epsilon_q+p_q)u_\mu u_\nu
++
+p_q q_{\mu\nu}.
+\]
+
+No anisotropic stress, heat flux, or additional dynamical polarization variable exists.
+
+## 4. Neutron-star implementation
+
+Accurate stellar oscillation calculations require a smooth representation of the microscopic equation of state. Ordinary piecewise-polytropic fits generally produce discontinuities in the sound speed at joining densities. Generalized piecewise polytropes were introduced to maintain continuity of pressure, energy density, and sound speed and are better suited to stellar perturbation calculations.
+
+Using the smooth SLy4 generalized-polytrope representation, the reconstructed \(1.4\,M_\odot\) cTPV equilibrium model gives
+
+\[
+R_{\rm cTPV}=11.5734\ {\rm km},
+\qquad
+\pi_{\max}=6.4708\times10^{-3}.
+\]
+
+The corresponding GR model based on the microscopic SLy4 EOS gives
+
+\[
+R_{\rm GR}=11.6279\ {\rm km}.
+\]
+
+These values demonstrate that the physical constitutive branch remains weakly polarized and far from the algebraic singularities at \(1-3\pi=0\) and \(1+\pi=0\).
+
+## 5. Oscillation test
+
+As an independent diagnostic, we solved the relativistic Cowling equations for polar fluid oscillations. For \(l=2\), the reconstructed frequencies are
+
+\[
+\begin{array}{c|cc}
+ & f_f\;({\rm Hz}) & f_{p_1}\;({\rm Hz})\\
+\hline
+{\rm GR\;microscopic\;EOS}
+&2428.414&6912.203\\
+{\rm cTPV\;background,\ microscopic}\ c_s^2
+&2442.531&6964.650\\
+{\rm full\ cTPV/effective\ EOS}
+&2443.198&6910.184
+\end{array}
+\]
+
+For the fundamental mode,
+
+\[
+\Delta f_{f,\mathrm{GR\rightarrow bg}}
+=
++14.117\ {\rm Hz},
+\]
+
+\[
+\Delta f_{f,\mathrm{bg\rightarrow full}}
+=
++0.667\ {\rm Hz}.
+\]
+
+For the first pressure mode,
+
+\[
+\Delta f_{p_1,\mathrm{GR\rightarrow bg}}
+=
++52.447\ {\rm Hz},
+\]
+
+whereas
+
+\[
+\Delta f_{p_1,\mathrm{bg\rightarrow full}}
+=
+-54.465\ {\rm Hz}.
+\]
+
+The two \(p_1\) contributions almost cancel:
+
+\[
+\boxed{
+f_{p_1,\mathrm{full}}
+-
+f_{p_1,\mathrm{GR}}
+=
+-2.019\ {\rm Hz}.
+}
+\]
+
+This large cancellation is an important numerical feature of the constitutive model, but it does not violate the effective-EOS theorem. The intermediate "background-only" model is a useful diagnostic construction, not the GR theory that is physically equivalent to the full cTPV configuration.
+
+The fully relativistic polar problem leads to the same conclusion. The Lindblom-Detweiler formulation uses four independent variables \(H_1,K,W,X\), with \(X\) proportional to the Lagrangian pressure perturbation; the eigenfrequency is fixed by regularity, the surface condition \(X(R)=0\), and an outgoing exterior wave condition. Once the equilibrium variables \(\epsilon_q,p_q\) and the derivative \(dp_q/d\epsilon_q\) are supplied, the equations are simply the GR equations for the effective fluid.
+
+## 6. Interpretation of the numerical differences
+
+The cTPV construction produces real and controlled changes relative to GR evaluated with the original microscopic EOS. These changes are useful for understanding the constitutive map and may be large in individual intermediate contributions.
+
+They are not, however, invariant evidence for new gravitational dynamics.
+
+An observer measuring only the metric and fluid motion can describe the same stellar configuration as
+
+\[
+\boxed{
+{\rm GR}
++
+{\rm effective\ matter}\ p_q(\epsilon_q).
+}
+\]
+
+Accordingly, differences in mass-radius relations, tidal deformabilities, or quasinormal-mode frequencies relative to the original microscopic EOS can be absorbed into the inferred equation of state.
+
+This conclusion is stronger than stating that the deviations are observationally small. Within the assumptions made here, the equivalence is structural.
+
+## 7. Relation to other constitutive representations of gravity
+
+Historical polarizable-vacuum approaches use material-medium language to represent gravitational effects and provide intuition for curved spacetime. The present formulation differs by adopting an explicitly tensorial and covariant constitutive map and by identifying the polarization with the state of spacetime rather than with a conventional substance embedded in spacetime.
+
+The effective-matter equivalence derived here also resembles mappings found in nonlinear metric-affine theories. In those theories, the Einstein-frame equations can take the standard Einstein form while nonlinearities are transferred to the matter source. The correspondence has been worked out explicitly even for anisotropic fluids.
+
+The lesson is general: a constitutive reinterpretation of gravity becomes observationally new only when the constitutive structure cannot be eliminated in favor of an allowed matter redefinition.
+
+## 8. Limitations
+
+The equivalence proven here applies to the algebraic, isotropic, cold-barotropic sector.
+
+It does not establish equivalence for magnetized matter, multifluids with relative currents, superfluids, elastic phases, dissipative media, tensorial polarization, or constitutive laws containing independent memory or propagation.
+
+In particular, a spatial trace-free constitutive stress,
+
+\[
+\Pi_{\mu\nu}\neq0,
+\qquad
+u^\mu\Pi_{\mu\nu}=0,
+\qquad
+{\Pi^\mu}_\mu=0,
+\]
+
+cannot be represented by a single scalar relation \(p_q(\epsilon_q)\).
+
+The general stress-energy decomposition already makes this distinction explicit: a perfect fluid contains only energy density and isotropic pressure, whereas an imperfect or elastic source additionally contains heat flux and trace-free anisotropic stress.
+
+## 9. Conclusion
+
+We have tested a covariant algebraic tensor-polarizable-vacuum interpretation of GR in the neutron-star perfect-fluid sector.
+
+The model is dynamically nontrivial when expressed relative to the microscopic matter EOS and exhibits significant cancellations between equilibrium and perturbative constitutive effects. Smooth-EOS neutron-star calculations provide a controlled numerical realization of this behavior.
+
+Nevertheless, the complete isotropic construction is exactly reducible to GR coupled to the apparent barotropic EOS \(p_q(\epsilon_q)\).
+
+We therefore obtain a negative result for the stronger hypothesis:
+
+\[
+\boxed{
+\text{the isotropic algebraic cTPV stellar sector is not an observationally distinct theory of gravity.}
+}
+\]
+
+At the same time, it provides a consistent constitutive interpretation of general relativity.
+
+The natural next question is whether the tensor character of the polarizable vacuum can become physically active. The minimal candidate is a trace-free spatial constitutive polarization producing reversible shear stress while remaining algebraically slaved to the existing matter/spacetime deformation. Such a model would retain the vacuum GR limit and the Einstein gravitational principal part while generating a response that cannot be encoded in a barotropic perfect-fluid EOS.
+
+That extension is developed below.
+
+## References
+
+Dicke, R. H. (1957), *Rev. Mod. Phys.* **29**, 363.
+
+Puthoff, H. E. (2002), *Found. Phys.* **32**, 927.
+
+O'Boyle, M. F., Markakis, C., Stergioulas, N., and Read, J. S. (2020), *Phys. Rev. D* **102**, 083027.
+
+Lindblom, L., and Detweiler, S. L. (1983), *Astrophys. J. Suppl.*
+
+Wu, J., and Leung, P. T. (2007), *Mon. Not. R. Astron. Soc.* **381**, 151.
+
+Afonso, V. I., Olmo, G. J., Orazi, E., and Rubiera-Garcia, D. (2018), *Eur. Phys. J. C* **78**, 866.
+
+Karlovini, M., and Samuelsson, L. (2003), *Class. Quantum Grav.*; relativistic elastic-star series.
+
+Karlovini, M., Samuelsson, L., and Zarroug, M. (2004), *Class. Quantum Grav.* **21**, 1559.
