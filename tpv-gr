@@ -345,3 +345,707 @@ Then
 E^{\mu\nu}
 \frac{\delta g_{\mu\nu}}
 {\delta\mathcal C^A}
+\delta\mathcal C^A
++
+\frac{\delta S}{\delta\Psi}\delta\Psi.
+\tag{27}
+\]
+
+Because \(\Phi\) is invertible, its differential has no physical kernel. Therefore
+
+\[
+\frac{\delta S_{\rm TPV}}
+{\delta\mathcal C^A}=0
+\quad\Longleftrightarrow\quad
+E^{\mu\nu}=0.
+\tag{28}
+\]
+
+Hence the TPV equations of motion are precisely
+
+\[
+\boxed{
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+=
+\kappa T_{\mu\nu}.
+}
+\tag{29}
+\]
+
+### Equivalence theorem
+
+Under fixed dimension, Lorentzian signature, orientation and time orientation, and with matter universally coupled to \(g[\mathcal C]\),
+
+\[
+\boxed{
+\mathrm{Sol}(\mathrm{TPV})
+/
+\mathrm{Diff}(M)
+\;\cong\;
+\mathrm{Sol}(\mathrm{GR})
+/
+\mathrm{Diff}(M).
+}
+\tag{30}
+\]
+
+Every GR spacetime defines one TPV spacetime, every admissible TPV spacetime reconstructs one GR spacetime, and the correspondence respects diffeomorphism equivalence.
+
+Equation (30) is the precise meaning of the claim that baseline TPV is an interpretation of general relativity rather than a modification of it.
+
+---
+
+## 5. Diffeomorphism covariance
+
+For a diffeomorphism \(\varphi:M\rightarrow M\),
+
+\[
+g\rightarrow\varphi^\ast g.
+\tag{31}
+\]
+
+Because both the Hodge operator and volume form are natural geometric constructions,
+
+\[
+\mathcal C[\varphi^\ast g]
+=
+\varphi^\ast\mathcal C[g].
+\tag{32}
+\]
+
+Thus the constitutive reformulation does not select a preferred coordinate system.
+
+Nor does TPV possess a preferred physical rest frame. An observer with four-velocity \(u^\mu\) may decompose the covariant constitutive relation into electric, magnetic and magnetoelectric response tensors, but these are observer-dependent projections of the same covariant object.
+
+This distinction is important. Familiar relations of the Plebanski type,
+
+\[
+D^i
+=
+\varepsilon^{ij}E_j
++
+\gamma^{ij}H_j,
+\qquad
+B^i
+=
+\mu^{ij}H_j
+-
+\gamma^{ij}E_j,
+\tag{33}
+\]
+
+with schematic identifications such as
+
+\[
+\varepsilon^{ij}
+=
+\mu^{ij}
+\propto
+-\frac{\sqrt{-g}}{g_{00}}g^{ij},
+\qquad
+\gamma_i
+\propto
+\frac{g_{0i}}{g_{00}},
+\tag{34}
+\]
+
+are useful coordinate representations, but they are not the fundamental TPV variables. Plebanski's original construction and later transformation-optics interpretations establish the mathematical correspondence, while covariant observer analyses show why an ordinary flat-background material interpretation should not be taken literally.
+
+TPV therefore uses Eq. (11), not a coordinate-specific \(\epsilon\)-\(\mu\) tensor, as its fundamental constitutive definition.
+
+---
+
+## 6. Matter coupling and conservation
+
+Matter couples through
+
+\[
+S_m[g[\mathcal C],\Psi].
+\tag{35}
+\]
+
+There is only one physical metric. All nongravitational sectors therefore use the same proper times, spatial distances and null cones.
+
+The stress-energy tensor is defined conventionally,
+
+\[
+T_{\mu\nu}
+=
+-\frac{2}{\sqrt{-g}}
+\frac{\delta S_m}
+{\delta g^{\mu\nu}}.
+\tag{36}
+\]
+
+The contracted Bianchi identity,
+
+\[
+\nabla^\mu G_{\mu\nu}=0,
+\tag{37}
+\]
+
+together with Eq. (29), gives
+
+\[
+\boxed{
+\nabla^\mu T_{\mu\nu}=0.
+}
+\tag{38}
+\]
+
+No additional “vacuum-medium” energy exchange appears because the TPV constitutive state is not an independent matter sector.
+
+A description such as “matter polarizes the vacuum” is therefore shorthand for
+
+\[
+T_{\mu\nu}
+\longrightarrow
+g_{\mu\nu}
+\longleftrightarrow
+\mathcal C[g].
+\tag{39}
+\]
+
+Matter changes spacetime geometry according to Einstein's equation; the same change can equivalently be described as a change of the spacetime constitutive state.
+
+---
+
+## 7. First-order and metric-affine representation
+
+The same equivalence may be displayed in first-order form. Consider the Einstein-Palatini action
+
+\[
+S_{\rm EP}
+=
+\frac{1}{2\kappa}
+\int d^4x\sqrt{-g}
+\left[
+g^{\mu\nu}R_{(\mu\nu)}(\Gamma)
+-2\Lambda
+\right]
++
+S_m[g,\Psi],
+\tag{40}
+\]
+
+where \(g_{\mu\nu}\) and \(\Gamma^\lambda{}_{\mu\nu}\) are initially independent and matter does not couple independently to the affine connection.
+
+The connection equation is algebraic in the appropriate geometric sense and fixes
+
+\[
+\Gamma^\lambda{}_{\mu\nu}
+=
+\left\{
+\begin{matrix}
+\lambda\\
+\mu\nu
+\end{matrix}
+\right\}_g
++
+\delta^\lambda{}_\nu A_\mu ,
+\tag{41}
+\]
+
+up to a projective gauge field \(A_\mu\). The projective contribution drops from the symmetric Ricci tensor entering Eq. (40), and the metric field equation becomes the ordinary Einstein equation. Hamiltonian analyses of the Einstein-Palatini formulation likewise find no additional physical gravitational degrees of freedom associated with the connection.
+
+Thus the connection may be interpreted as part of the geometric/constitutive representation without becoming an independent propagating substance.
+
+This observation also clarifies the relation between baseline TPV and broader Ricci-based metric-affine theories. Projectively invariant Ricci-based theories can often be mapped to an Einstein-frame description, but nontrivial deformation matrices generally generate altered matter interactions. They are therefore not automatically identical to GR.
+
+For **exactly equivalent TPV**, the gravitational theory is instead Eq. (23) or its Einstein-Palatini equivalent. Matter-dependent metric-affine deformations belong to possible *active extensions* and must not be invoked in the proof of exact GR equivalence.
+
+---
+
+## 8. Hamiltonian constraints and degrees of freedom
+
+Writing the metric in ADM form,
+
+\[
+ds^2
+=
+-N^2dt^2
++
+\gamma_{ij}
+(dx^i+N^idt)
+(dx^j+N^jdt),
+\tag{42}
+\]
+
+the Einstein-Hilbert action becomes, up to boundary terms,
+
+\[
+S_g
+=
+\frac{1}{2\kappa}
+\int dt\,d^3x\,
+N\sqrt{\gamma}
+\left[
+{}^{(3)}R
++
+K_{ij}K^{ij}
+-
+K^2
+-
+2\Lambda
+\right].
+\tag{43}
+\]
+
+The lapse \(N\) and shift \(N^i\) possess no independent kinetic terms. Their variations impose the Hamiltonian and momentum constraints,
+
+\[
+\mathcal H_\perp=0,
+\qquad
+\mathcal H_i=0.
+\tag{44}
+\]
+
+For the six components of \(\gamma_{ij}\) and six conjugate momenta, four first-class constraints and four associated gauge directions remove eight phase-space dimensions:
+
+\[
+12-2(4)=4.
+\tag{45}
+\]
+
+Thus the gravitational phase space contains
+
+\[
+\frac{4}{2}=2
+\tag{46}
+\]
+
+local configuration-space degrees of freedom.
+
+These are the two tensor polarizations of general relativity.
+
+The TPV constitutive transformation is invertible and does not alter the rank of the Legendre map or the constraint structure. Therefore
+
+\[
+\boxed{
+N_{\rm DOF}^{\rm TPV}
+=
+N_{\rm DOF}^{\rm GR}
+=
+2.
+}
+\tag{47}
+\]
+
+Standard Hamiltonian treatments of GR explicitly recover this two-degree-of-freedom structure. Recent work has also shown directly how ADM metric variables can be translated into constitutive/optical variables, including correspondence between spatial metric, shift, material response and the two TT gravitational-wave degrees of freedom.
+
+---
+
+## 9. Linear gravitational waves
+
+Let
+
+\[
+g_{\mu\nu}
+=
+\eta_{\mu\nu}
++
+h_{\mu\nu}.
+\tag{48}
+\]
+
+In vacuum, after imposing the usual transverse-traceless conditions,
+
+\[
+h_{0\mu}^{\rm TT}=0,
+\qquad
+\partial^ih_{ij}^{\rm TT}=0,
+\qquad
+h^{i}{}_{i}^{\rm TT}=0,
+\tag{49}
+\]
+
+the field equation is
+
+\[
+\Box h_{ij}^{\rm TT}=0.
+\tag{50}
+\]
+
+There are two independent polarizations.
+
+The corresponding first-order constitutive perturbation follows from Eq. (6):
+
+\[
+\begin{aligned}
+\delta\chi^{\mu\nu\rho\sigma}
+={}&
+\frac{h}{2}
+\left(
+\eta^{\mu\rho}\eta^{\nu\sigma}
+-
+\eta^{\mu\sigma}\eta^{\nu\rho}
+\right)
+\\
+&
+-
+h^{\mu\rho}\eta^{\nu\sigma}
+-\eta^{\mu\rho}h^{\nu\sigma}
++h^{\mu\sigma}\eta^{\nu\rho}
++\eta^{\mu\sigma}h^{\nu\rho}.
+\end{aligned}
+\tag{51}
+\]
+
+For a TT perturbation,
+
+\[
+h=0.
+\tag{52}
+\]
+
+Thus the two physical components of \(h_{ij}^{\rm TT}\) map directly to two tensorial perturbations of the constitutive state.
+
+A TPV gravitational wave is therefore not a new wave travelling through a separate substrate. It is the ordinary GR gravitational wave expressed as a propagating tensor variation of vacuum-spacetime polarization.
+
+No third polarization is generated.
+
+No scalar polarization is generated.
+
+No additional dispersion relation is generated.
+
+In baseline TPV,
+
+\[
+\boxed{
+\omega^2=c^2k^2,
+}
+\tag{53}
+\]
+
+exactly as in GR.
+
+---
+
+## 10. Curvature as constitutive geometry
+
+The phrase “curvature is a change in polarization” requires refinement.
+
+A metric can vary with coordinates even in flat spacetime, so ordinary coordinate gradients of constitutive components are not themselves curvature.
+
+Instead, because
+
+\[
+g=g[\mathcal C],
+\tag{54}
+\]
+
+the Riemann tensor may be written formally as
+
+\[
+R^\rho{}_{\sigma\mu\nu}
+=
+R^\rho{}_{\sigma\mu\nu}
+[\mathcal C,\partial\mathcal C,\partial^2\mathcal C].
+\tag{55}
+\]
+
+Curvature is the invariant obstruction to transforming the constitutive spacetime state into the constant Minkowski state throughout an extended region.
+
+At any point \(p\), local inertial coordinates may be chosen so that
+
+\[
+g_{\mu\nu}(p)=\eta_{\mu\nu},
+\qquad
+\partial_\alpha g_{\mu\nu}(p)=0.
+\tag{56}
+\]
+
+Correspondingly,
+
+\[
+\mathcal C(p)
+=
+\mathcal C_{\rm Minkowski},
+\tag{57}
+\]
+
+to local inertial order.
+
+What remains physically invariant is tidal structure,
+
+\[
+R^\rho{}_{\sigma\mu\nu}(p)\neq0.
+\tag{58}
+\]
+
+TPV therefore interprets curvature as the covariant spatial-temporal structure of the constitutive state, not as an absolute local polarization detectable independently of an observer.
+
+This reproduces rather than replaces the equivalence principle.
+
+---
+
+## 11. Physical interpretation
+
+The GR and TPV descriptions may be summarized as
+
+\[
+\boxed{
+\text{metric geometry}
+\quad\longleftrightarrow\quad
+\text{constitutive state of vacuum-spacetime}.
+}
+\tag{59}
+\]
+
+Likewise,
+
+\[
+\boxed{
+\text{curvature}
+\quad\longleftrightarrow\quad
+\text{invariant nonuniformity of the constitutive state}.
+}
+\tag{60}
+\]
+
+and
+
+\[
+\boxed{
+\text{gravitational radiation}
+\quad\longleftrightarrow\quad
+\text{propagating tensor constitutive deformation}.
+}
+\tag{61}
+\]
+
+The word “vacuum” does not denote empty space plus a material ingredient. It denotes the dynamical spacetime manifold itself.
+
+The word “polarizable” denotes its constitutive response to the distribution and motion of matter and energy.
+
+The word “tensor” emphasizes that its gravitational state cannot in general be represented by a scalar refractive index. A general spacetime requires tensorial spatial response, magnetoelectric structure in non-static foliations, and a dynamical volume element.
+
+This interpretation is compatible with earlier constitutive approaches to spacetime while avoiding identification with a literal laboratory dielectric. Covariant formulations of constitutive electrodynamics show that permittivity, permeability and magnetoelectric tensors are observer-dependent pieces of a unified four-dimensional constitutive tensor.
+
+---
+
+## 12. Exact observational equivalence
+
+Let \(\mathcal O[g,\Psi]\) be any diffeomorphism-invariant observable of GR.
+
+Define the corresponding TPV observable by
+
+\[
+\mathcal O_{\rm TPV}[\mathcal C,\Psi]
+=
+\mathcal O[g[\mathcal C],\Psi].
+\tag{62}
+\]
+
+For corresponding solutions,
+
+\[
+\boxed{
+\mathcal O_{\rm TPV}
+=
+\mathcal O_{\rm GR}.
+}
+\tag{63}
+\]
+
+This includes, without limitation,
+
+- gravitational redshift;
+- light deflection;
+- Shapiro delay;
+- perihelion precession;
+- frame dragging;
+- binary-pulsar dynamics;
+- gravitational-wave generation and propagation;
+- black-hole geometries;
+- cosmological expansion;
+- neutron-star structure;
+- tidal Love numbers;
+- quasinormal spectra; and
+- strong-field causal structure.
+
+No experiment can distinguish baseline TPV from GR because the two formulations possess the same solution space and observables.
+
+This is a feature rather than a deficiency for an interpretive theory.
+
+---
+
+## 13. What TPV does not yet explain
+
+Exact equivalence places sharp limits on the claims that may be made.
+
+Baseline TPV does **not** explain why the Einstein-Hilbert action is selected from deeper microscopic principles.
+
+It does not derive quantum gravity.
+
+It does not derive Standard Model matter as excitations of the vacuum.
+
+It does not resolve the cosmological constant problem.
+
+It does not predict dark matter or dark energy beyond what the corresponding GR matter model predicts.
+
+It does not provide a microscopic mechanical substrate analogous to atoms in an ordinary dielectric.
+
+And, because it is exactly equivalent to GR,
+
+\[
+\text{baseline TPV cannot produce an observable deviation from GR}.
+\tag{64}
+\]
+
+Those are separate research questions.
+
+The present result is narrower but stronger: a tensor-polarizable-vacuum ontology can be formulated without contradicting general relativity because it can be made mathematically identical to general relativity.
+
+---
+
+## 14. Relation to alternative gravitational theories
+
+This distinction is particularly important when additional constitutive variables are introduced.
+
+Suppose one enlarges the state space from
+
+\[
+\mathcal C=\Phi(g)
+\tag{65}
+\]
+
+to
+
+\[
+(\mathcal C,Q_A),
+\tag{66}
+\]
+
+where \(Q_A\) contains independent polarization variables.
+
+Unless the \(Q_A\) are purely constrained or gauge, the extension can introduce new degrees of freedom.
+
+Similarly, higher-curvature constitutive terms can alter the gravitational propagator. Generic quadratic-curvature metric theories contain additional massive modes, including a massive spin-2 ghost if interpreted as fundamental theories rather than controlled effective theories.
+
+Moreover, in four dimensions, Lovelock-type uniqueness results strongly constrain local, generally covariant, single-metric theories with second-order field equations: under the usual assumptions, GR plus a cosmological constant is the unique nontrivial theory.
+
+Therefore a physically active TPV extension must state explicitly which assumption is relaxed. Possibilities include a controlled effective-field-theory expansion, constrained auxiliary variables, additional but nondynamical matter structures, nonlocal response, or a reduced/refined symmetry structure.
+
+The exactly equivalent TPV developed here remains the reference point against which such extensions should be measured.
+
+---
+
+## 15. Discussion
+
+The formal construction resolves several ambiguities that commonly arise in polarizable-vacuum descriptions.
+
+First, TPV does not place a medium inside a background spacetime. The metric and constitutive state are the same physical object represented differently.
+
+Second, polarization is tensorial and covariant. Coordinate permittivities and permeabilities are derived quantities rather than fundamental fields.
+
+Third, electromagnetic constitutive information alone is insufficient to specify the full spacetime metric because of conformal invariance in four dimensions. Including the metric volume form removes this degeneracy.
+
+Fourth, no extra dynamical field has been introduced. Hence the GR Hamiltonian constraints and two tensor degrees of freedom survive exactly.
+
+Fifth, matter continues to couple universally to a single physical metric. Consequently geodesic structure, causal cones and stress-energy conservation are untouched.
+
+Finally, the interpretation is compatible with the broader observation that Einstein dynamics can itself be encoded in constitutive variables. Recent work extending the Plebanski mapping to ADM dynamics provides an explicit field-equation-level realization in which lapse, shift, spatial metric, extrinsic curvature and tensor gravitational waves can be represented through corresponding constitutive quantities.
+
+The distinction is that TPV does not treat such a medium as an engineered analogue. It interprets the constitutive variables as a representation of the physical spacetime itself.
+
+---
+
+## 16. Conclusion
+
+We have constructed an exactly general-relativistic Tensor Polarizable Vacuum interpretation.
+
+The fundamental dictionary is
+
+\[
+\boxed{
+g_{\mu\nu}
+\;\longleftrightarrow\;
+\mathcal C
+=
+\left(
+\star_g|_{\Lambda^2},
+\boldsymbol{\epsilon}_g
+\right).
+}
+\tag{67}
+\]
+
+The constitutive Hodge operator fixes the conformal spacetime geometry and the volume form fixes the remaining conformal scale. The map is therefore invertible.
+
+Defining
+
+\[
+S_{\rm TPV}[\mathcal C,\Psi]
+=
+S_{\rm GR}[g[\mathcal C],\Psi]
+\tag{68}
+\]
+
+gives a theory whose equations of motion, constraint algebra, matter conservation, causal structure, gravitational degrees of freedom and observables are precisely those of general relativity.
+
+Accordingly,
+
+\[
+\boxed{
+\mathrm{TPV}_{\rm GR}
+\equiv
+\mathrm{GR}
+}
+\tag{69}
+\]
+
+as a classical physical theory.
+
+The distinction is interpretive:
+
+\[
+\boxed{
+\text{spacetime is the tensor-polarizable vacuum}.
+}
+\tag{70}
+\]
+
+What general relativity calls the metric is the constitutive state of that vacuum-spacetime; what GR calls curvature is the invariant geometric structure of its polarization; and what GR calls gravitational radiation is propagating tensor deformation of that same constitutive state.
+
+No additional medium is required.
+
+No preferred background is required.
+
+No additional gravitational degree of freedom is required.
+
+No departure from general relativity is predicted.
+
+This establishes Tensor Polarizable Vacuum as a mathematically viable constitutive interpretation of general relativity and supplies a sharply defined GR limit for future physically active TPV extensions.
+
+---
+
+## References
+
+1. J. Plebanski, “Electromagnetic Waves in Gravitational Fields,” *Physical Review* **118**, 1396 (1960), doi:10.1103/PhysRev.118.1396.
+
+2. Y. N. Obukhov and F. W. Hehl, “Spacetime metric from linear electrodynamics,” *Physics Letters B* **458**, 466–470 (1999), doi:10.1016/S0370-2693(99)00643-7.
+
+3. F. W. Hehl, Y. N. Obukhov and G. F. Rubilar, “Spacetime metric from linear electrodynamics II,” arXiv:gr-qc/9911096.
+
+4. G. F. Rubilar, “Linear pre-metric electrodynamics and deduction of the light cone,” *Annalen der Physik* **11**, 717–782 (2002), doi:10.1002/andp.200251410-1102.
+
+5. F. W. Hehl and Y. N. Obukhov, *Foundations of Classical Electrodynamics: Charge, Flux, and Metric*, Birkhäuser (2003), doi:10.1007/978-1-4612-0051-2.
+
+6. S. Schuster and M. Visser, “Effective metrics and a fully covariant description of constitutive tensors in electrodynamics,” *Physical Review D* **96**, 124019 (2017), doi:10.1103/PhysRevD.96.124019.
+
+7. J. Hwang and H. Noh, “Maxwell equations in curved spacetime,” *European Physical Journal C* **83**, 969 (2023).
+
+8. N. Dadhich and J. M. Pons, “On the equivalence of the Einstein-Hilbert and the Einstein-Palatini formulations of general relativity for an arbitrary connection,” *General Relativity and Gravitation* **44**, 2337–2352 (2012), doi:10.1007/s10714-012-1393-9.
+
+9. A. N. Bernal et al., “On the (non-)uniqueness of the Levi-Civita solution in the Einstein-Hilbert-Palatini formalism,” *Physics Letters B* **768**, 280–287 (2017), doi:10.1016/j.physletb.2017.03.001.
+
+10. V. I. Afonso, G. J. Olmo and D. Rubiera-Garcia, “Mapping Ricci-based theories of gravity into general relativity,” *Physical Review D* **97**, 021503(R) (2018), doi:10.1103/PhysRevD.97.021503.
+
+11. S. Carlip, “The Hamiltonian formalism,” in *General Relativity: A Concise Introduction*, Oxford University Press (2019).
+
+12. E. E. Erkul and U. Leonhardt, “Einstein's equations in electromagnetic media,” *Europhysics Letters* **154**, ae58cf (2026), doi:10.1209/0295-5075/ae58cf.
+
+13. D. Lovelock, “The uniqueness of the Einstein field equations in a four-dimensional space,” *Archive for Rational Mechanics and Analysis* **33**, 54–70 (1969), doi:10.1007/BF00248156.
