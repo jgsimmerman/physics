@@ -1,0 +1,347 @@
+# Tensor Polarizable Vacuum  
+## An Exactly General-Relativistic Constitutive Interpretation of Spacetime
+
+### Abstract
+
+We formulate the **Tensor Polarizable Vacuum (TPV)** as a constitutive interpretation of general relativity rather than as a modified theory of gravity. The central ontological statement is that the vacuum is not a material field embedded in spacetime: the vacuum is spacetime itself. Its “polarization” is a constitutive representation of the same geometric state ordinarily represented by the Lorentzian metric. To make this statement mathematically precise, we associate with every spacetime metric \(g_{\mu\nu}\) a metric-induced constitutive state consisting of the Hodge dual acting on two-forms together with the metric volume form. The Hodge operator determines the conformal metric in four dimensions, while the volume form fixes the otherwise undetermined conformal scale. Consequently the pair provides, under fixed orientation and Lorentzian signature, an invertible representation of the metric.
+
+We define the TPV action by pulling the Einstein-Hilbert-matter action through this constitutive map and prove that its stationary points are in one-to-one correspondence with solutions of the Einstein field equations. Diffeomorphism gauge orbits, causal structure, geodesic motion, stress-energy conservation, the Hamiltonian and momentum constraints, and the two local tensor degrees of freedom are preserved. An equivalent Einstein-Palatini representation shows that an independent affine connection remains auxiliary, reducing to the Levi-Civita connection up to projective gauge. Linear gravitational waves therefore possess only the standard \(+\) and \(\times\) polarizations, represented in TPV language as propagating tensor perturbations of the constitutive state.
+
+The construction gives no observable departure from general relativity and is not presented as a microscopic theory of a material ether. Rather, it supplies a precise constitutive interpretation of the physical meaning assigned to spacetime geometry. Curvature is interpreted not as an additional field acting upon the vacuum but as the invariant nonuniformity and nonintegrability of the vacuum-spacetime constitutive state itself. We distinguish this exactly equivalent theory from physically active TPV extensions, in which additional constitutive response would produce genuine departures from general relativity.
+
+---
+
+## 1. Introduction
+
+General relativity describes gravitation through a Lorentzian metric \(g_{\mu\nu}\) whose curvature responds to stress-energy according to
+
+\[
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+\kappa T_{\mu\nu},
+\qquad
+\kappa=\frac{8\pi G}{c^4}.
+\tag{1}
+\]
+
+The mathematical success of this description does not by itself prescribe a unique ontology for the metric. One may regard geometry as fundamental, regard the metric as a gravitational field, or seek an alternative physical interpretation without changing the mathematical theory.
+
+A long-standing connection between spacetime geometry and constitutive physics arises in electrodynamics. Maxwell theory on curved spacetime can be expressed through a local linear spacetime constitutive relation. Plebanski showed how components of a curved metric can be represented in a dielectric-like form, while subsequent premetric electrodynamics established that appropriate constitutive structure determines the conformal spacetime metric itself.
+
+The terminology of a dielectric medium must, however, be treated carefully. Coordinate-based permittivity and permeability tensors need not correspond directly to quantities measured by a physical observer, and recent analyses have emphasized shortcomings in interpreting the traditional Plebanski construction as an ordinary material medium in flat spacetime. We therefore do **not** identify spacetime with a conventional dielectric embedded in an antecedent Minkowski background.
+
+Instead, we adopt the following interpretation:
+
+> **The tensor polarizable vacuum is spacetime itself. Its constitutive state and the spacetime metric are two representations of the same gravitational configuration.**
+
+There is consequently no background spacetime containing the TPV, no independent ether four-velocity, and no additional stress-energy tensor describing the vacuum medium. A freely falling local observer encounters precisely the local physics of general relativity.
+
+The purpose of this paper is to turn this interpretation into an exact mathematical statement. In particular, we show that:
+
+1. the complete metric can be represented by a covariant constitutive state;
+2. the constitutive representation is invertible;
+3. the TPV action is exactly the Einstein-Hilbert action expressed in different variables;
+4. matter couples universally to the same reconstructed physical metric;
+5. the Einstein equations, Bianchi identity, conservation laws and constraint structure are unchanged;
+6. TPV possesses exactly the two propagating gravitational degrees of freedom of GR; and
+7. every observable prediction of baseline TPV is identical to that of GR.
+
+The result is therefore a physical **interpretation/reformulation of GR**, not a competing gravitational theory.
+
+---
+
+## 2. Covariant constitutive structure of spacetime
+
+### 2.1 Maxwell theory without a metric-first formulation
+
+Let \(M\) be an oriented four-dimensional differentiable manifold. In differential-form notation Maxwell's equations may be written
+
+\[
+dF=0,
+\qquad
+dH=J,
+\tag{2}
+\]
+
+where \(F\) is the electromagnetic field-strength two-form, \(H\) is the excitation two-form and \(J\) is the electric current three-form.
+
+Equations (2) do not themselves determine the relationship between \(F\) and \(H\). Vacuum electrodynamics introduces the constitutive law
+
+\[
+H=\lambda_0\,\star_g F,
+\tag{3}
+\]
+
+where \(\lambda_0\) is the vacuum admittance and
+
+\[
+\star_g:\Lambda^2T^\ast M
+\rightarrow
+\Lambda^2T^\ast M
+\tag{4}
+\]
+
+is the Hodge operator generated by the spacetime metric.
+
+In components this may equivalently be written
+
+\[
+H^{\mu\nu}
+=
+\frac{\lambda_0}{2}
+\chi^{\mu\nu\rho\sigma}[g]F_{\rho\sigma},
+\tag{5}
+\]
+
+where, up to the choice of tensor-density convention,
+
+\[
+\chi^{\mu\nu\rho\sigma}[g]
+=
+\sqrt{-g}
+\left(
+g^{\mu\rho}g^{\nu\sigma}
+-
+g^{\mu\sigma}g^{\nu\rho}
+\right).
+\tag{6}
+\]
+
+The metric therefore enters electromagnetism precisely through a constitutive relation. Premetric analyses show conversely that symmetry and closure conditions on an appropriate local linear constitutive tensor determine a conformal Lorentzian metric.
+
+This observation motivates TPV but is not itself sufficient to reconstruct all of GR.
+
+### 2.2 The conformal-scale problem
+
+In four spacetime dimensions, the Hodge operator on two-forms is invariant under
+
+\[
+g_{\mu\nu}\rightarrow
+\Omega^2(x)g_{\mu\nu}.
+\tag{7}
+\]
+
+Consequently,
+
+\[
+\star_{\Omega^2 g}\big|_{\Lambda^2}
+=
+\star_g\big|_{\Lambda^2}.
+\tag{8}
+\]
+
+The electromagnetic constitutive tensor therefore determines the **conformal class**
+
+\[
+[g]=
+\{\Omega^2g\},
+\tag{9}
+\]
+
+but not the absolute conformal factor.
+
+This is not a minor technicality. A theory claiming exact equivalence to GR cannot identify the full metric with the electromagnetic constitutive tensor alone.
+
+The minimal TPV state must therefore contain one additional geometric quantity carrying the conformal scale. The natural choice is the metric volume four-form,
+
+\[
+\boldsymbol{\epsilon}_g
+=
+\sqrt{-g}\,
+dx^0\wedge dx^1\wedge dx^2\wedge dx^3 .
+\tag{10}
+\]
+
+We define the complete TPV constitutive state as
+
+\[
+\boxed{
+\mathcal C[g]
+\equiv
+\left(
+\star_g\big|_{\Lambda^2},
+\boldsymbol{\epsilon}_g
+\right).
+}
+\tag{11}
+\]
+
+The first component determines causal/conformal geometry; the second fixes its scale.
+
+---
+
+## 3. Reconstruction theorem
+
+Consider two Lorentzian metrics \(g\) and \(\tilde g\), with the same orientation and time orientation, such that
+
+\[
+\star_g=\star_{\tilde g}
+\tag{12}
+\]
+
+on all two-forms.
+
+The constitutive-metric reconstruction results imply that the two metrics must be conformally related:
+
+\[
+\tilde g_{\mu\nu}
+=
+\Omega^2g_{\mu\nu}.
+\tag{13}
+\]
+
+Their volume forms satisfy
+
+\[
+\boldsymbol{\epsilon}_{\tilde g}
+=
+\Omega^4\boldsymbol{\epsilon}_g.
+\tag{14}
+\]
+
+If the complete TPV states agree,
+
+\[
+\mathcal C[\tilde g]
+=
+\mathcal C[g],
+\tag{15}
+\]
+
+then
+
+\[
+\boldsymbol{\epsilon}_{\tilde g}
+=
+\boldsymbol{\epsilon}_g,
+\tag{16}
+\]
+
+and hence
+
+\[
+\Omega^4=1.
+\tag{17}
+\]
+
+Taking the positive conformal factor compatible with unchanged Lorentzian signature and orientation gives
+
+\[
+\Omega=1.
+\tag{18}
+\]
+
+Therefore
+
+\[
+\boxed{
+\mathcal C[\tilde g]=\mathcal C[g]
+\quad\Longrightarrow\quad
+\tilde g=g.
+}
+\tag{19}
+\]
+
+Conversely, equality of the metrics trivially gives equality of their constitutive states.
+
+Thus the map
+
+\[
+\Phi:
+g_{\mu\nu}
+\longmapsto
+\mathcal C[g]
+\tag{20}
+\]
+
+is one-to-one onto its image.
+
+We denote the space of metric-induced TPV configurations by
+
+\[
+\mathscr C_{\rm TPV}
+\equiv
+\Phi\!\left(\mathrm{Met}_{1,3}(M)\right).
+\tag{21}
+\]
+
+There exists an inverse map
+
+\[
+g_{\mu\nu}
+=
+g_{\mu\nu}[\mathcal C].
+\tag{22}
+\]
+
+This is the central formal result required for exact equivalence.
+
+Importantly, \(\mathcal C\) is **not** an unrestricted 36-component constitutive tensor. Only constitutive configurations belonging to the metric-induced submanifold \(\mathscr C_{\rm TPV}\) are allowed. The apparent proliferation of constitutive components therefore introduces no new physical fields.
+
+---
+
+## 4. TPV action
+
+The Einstein-Hilbert-matter action is
+
+\[
+S_{\rm GR}[g,\Psi]
+=
+\frac{1}{2\kappa}
+\int_M
+\boldsymbol{\epsilon}_g
+\left(R[g]-2\Lambda\right)
++
+S_m[g,\Psi].
+\tag{23}
+\]
+
+Here \(\Psi\) denotes the complete collection of matter fields.
+
+The baseline TPV action is defined simply by composition with the inverse constitutive map:
+
+\[
+\boxed{
+S_{\rm TPV}[\mathcal C,\Psi]
+=
+S_{\rm GR}[g[\mathcal C],\Psi].
+}
+\tag{24}
+\]
+
+Equation (24) is not an approximation, low-energy expansion or matching prescription. It is a change of variables on the gravitational configuration space.
+
+Let \(E^{\mu\nu}\) denote the metric Euler-Lagrange derivative,
+
+\[
+E^{\mu\nu}
+=
+\frac{2}{\sqrt{-g}}
+\frac{\delta S_{\rm GR}}{\delta g_{\mu\nu}}.
+\tag{25}
+\]
+
+An admissible TPV variation satisfies
+
+\[
+\delta g_{\mu\nu}
+=
+\frac{\delta g_{\mu\nu}}
+{\delta \mathcal C^A}
+\delta\mathcal C^A ,
+\tag{26}
+\]
+
+where \(A\) labels independent tangent directions on
+\(\mathscr C_{\rm TPV}\).
+
+Then
+
+\[
+\delta S_{\rm TPV}
+=
+\frac12
+\int d^4x\sqrt{-g}\,
+E^{\mu\nu}
+\frac{\delta g_{\mu\nu}}
+{\delta\mathcal C^A}
