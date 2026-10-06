@@ -1,0 +1,821 @@
+\documentclass[aps,prd,twocolumn,nofootinbib,superscriptaddress]{revtex4-2}
+
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\newcommand{\mpl}{M_{\rm Pl}}
+\newcommand{\Lie}{\mathcal{L}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\dd}{\mathrm{d}}
+
+\begin{document}
+
+\title{Physically Active Tensor Polarizable Vacuum:\\
+A Matter-Gated Gravitomagnetic Effective Theory and Neutron-Star Moment of Inertia}
+
+\author{Jacob G. Simmerman}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We develop a physically active extension of the Tensor Polarizable Vacuum (TPV)
+interpretation of general relativity in which the vacuum is identified with spacetime
+itself and acquires a matter-gated tensor constitutive response.  The leading operator is
+constructed from the magnetic part of the Weyl tensor measured in the local matter
+frame,
+\begin{equation*}
+ \Delta S =
+ \frac{\mpl^2}{2}\frac{\alpha_B}{\Lambda_Q^2}
+ \int \dd^4x\sqrt{-g}\,
+ \Gamma\, B_{\mu\nu}B^{\mu\nu}.
+\end{equation*}
+The matter four-velocity is not an independent aether field but is supplied by the
+covariant perfect-fluid sector.  The theory is treated as an effective field theory (EFT)
+and defined perturbatively by reduction of order.  To first order in
+$\alpha_B/\Lambda_Q^2$, the unknown corrections are acted on by the ordinary
+linearized Einstein--fluid operator; higher-derivative terms enter only as sources
+evaluated on the general-relativistic solution.  Hence the retained low-energy branch
+requires no additional initial data beyond general relativity plus the original matter
+degrees of freedom.
+
+All static configurations aligned with the matter rest frame satisfy
+$B_{\mu\nu}=0$.  Consequently every static general-relativistic perfect-fluid solution
+is also an exact TPV solution, and the zero-frequency gravitoelectric tidal response is
+unchanged.  Rotation activates the new constitutive sector.  In the Hartle slow-rotation
+limit we derive a positive-definite first-order correction to the stellar moment of
+inertia.  For $\alpha_B>0$ and a nonnegative gate, the correction obeys
+$\Delta I>0$ analytically.  An illustrative $1.4\,M_\odot$ tabulated SLY4 benchmark
+with $R=11.7240\,{\rm km}$ and $I_{\rm GR}=101.4204\,{\rm km^3}$ gives
+$\Delta I/I_{\rm GR}=7.54\times10^{-4}$ at $\alpha_B=0.05$ for the fiducial gate and
+$\Lambda_Q$ used here.  The theory therefore leaves the static mass--radius and
+gravitoelectric tidal sectors unchanged while modifying the gravitomagnetic response
+of rotating matter.  We discuss the EFT domain, limitations, and the outstanding
+second-order rotational quadrupole calculation.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+General relativity (GR) describes gravitation geometrically through a Lorentzian metric,
+but this mathematical description does not uniquely fix an ontology for the metric.
+A useful complementary viewpoint is constitutive: the gravitational state may be
+interpreted as a tensorial response state of the vacuum, provided that the ``vacuum''
+is not regarded as a material substance embedded in a pre-existing spacetime.  In the
+Tensor Polarizable Vacuum (TPV) interpretation, the vacuum \emph{is spacetime}.
+The baseline TPV description is therefore simply a constitutive representation of GR
+and introduces no new observable physics.
+
+The purpose of the present work is different.  We ask whether the tensor character of
+the TPV can be made physically active while preserving an exact GR limit and avoiding
+new low-energy gravitational modes.  A natural response channel is the magnetic part of
+the Weyl tensor.  Relative to a unit timelike matter four-velocity $u^\mu$,
+\begin{equation}
+ B_{\mu\nu}
+ =
+ {}^\star C_{\mu\alpha\nu\beta}u^\alpha u^\beta ,
+ \label{eq:Bdef}
+\end{equation}
+where ${}^\star C_{\mu\alpha\nu\beta}$ denotes the left dual of the Weyl tensor.
+Unlike the electric Weyl tensor, $B_{\mu\nu}$ vanishes in static spacetimes relative to
+the natural static observers; all static spacetimes are purely electric in this sense
+\cite{Hervik2012}.  This property makes $B_{\mu\nu}B^{\mu\nu}$ attractive for a
+matter-gated extension: static stellar structure can remain exactly GR while rotation,
+vorticity, and dynamical shear activate a genuinely tensorial response.
+
+Curvature-squared operators generically lead to higher-order field equations if treated
+nonperturbatively.  We therefore define active TPV as an EFT, not as a fundamental
+fourth-order theory.  Reduction-of-order methods have a long history in gravitational
+effective theories \cite{Simon1990,ParkerSimon1993}, and modern work has demonstrated
+well-posed low-energy formulations for classes of higher-derivative gravitational EFTs
+when corrections remain perturbatively small \cite{DaviesReall2022}.  The physically
+retained TPV solution branch is the one continuously connected to GR.
+
+Our central results are:
+\begin{enumerate}
+\item a generally covariant, matter-frame active-TPV action with no independent aether
+      field;
+\item an exact Noether consistency relation between the TPV metric response and the
+      matter force;
+\item an exact static-sector theorem: all static GR perfect-fluid solutions and their
+      zero-frequency gravitoelectric tidal response are unchanged;
+\item an order-reduced field equation whose principal operator is the ordinary
+      linearized Einstein--fluid operator;
+\item a positive-definite slow-rotation correction to the moment of inertia, implying
+      $\Delta I>0$ for $\alpha_B>0$ and $\Gamma\ge 0$.
+\end{enumerate}
+
+The rotational quadrupole $Q$ is deliberately not reported here.  Its
+$O(\alpha_B\Omega^2)$ computation requires the complete $l=2$ variation of the
+matter-gated $B^2$ operator, not merely the $P_2$ component of $B^2$ itself.  We regard
+that calculation as a natural extension rather than a prerequisite for the results
+presented below.
+
+Throughout we use $G=c=1$ and metric signature $(-,+,+,+)$.
+
+\section{Covariant active-TPV theory}
+
+\subsection{Matter frame}
+
+A general relativistic perfect fluid can be formulated covariantly using comoving
+matter coordinates or equivalent variational variables \cite{Brown1993}.  We denote the
+matter fields collectively by $\psi^A$ and assume that they define a normalized physical
+four-velocity
+\begin{equation}
+ u^\mu u_\mu=-1.
+\end{equation}
+The important point is that $u^\mu$ is an existing matter variable.  No additional
+aether, preferred foliation, or independent timelike vector field is introduced.
+
+For a barotropic perfect fluid,
+\begin{equation}
+ T_{\mu\nu}=(\rho+p)u_\mu u_\nu+p g_{\mu\nu}.
+\end{equation}
+The construction can accommodate vortical flow; hypersurface orthogonality of
+$u^\mu$ is not assumed in the covariant theory.
+
+\subsection{Action}
+
+We define
+\begin{equation}
+ S_{\rm TPV}
+ =
+ S_{\rm EH}
+ +
+ S_m[g,\psi]
+ +
+ S_B ,
+ \label{eq:action}
+\end{equation}
+with
+\begin{equation}
+ S_{\rm EH}
+ =
+ \frac{\mpl^2}{2}\int \dd^4x\sqrt{-g}\,R,
+\end{equation}
+and
+\begin{equation}
+ S_B
+ =
+ \frac{\mpl^2}{2}\lambda
+ \int \dd^4x\sqrt{-g}\,
+ \Gamma(\rho,p,\ldots)\,
+ B_{\mu\nu}B^{\mu\nu},
+ \qquad
+ \lambda\equiv\frac{\alpha_B}{\Lambda_Q^2}.
+ \label{eq:SB}
+\end{equation}
+Here $\alpha_B$ is dimensionless, $\Lambda_Q$ is the EFT scale, and $\Gamma$ is a
+dimensionless covariant gate built from local matter scalars.  We require
+\begin{equation}
+ \Gamma\rightarrow0
+ \quad\text{smoothly as matter}\rightarrow0,
+ \label{eq:gatevac}
+\end{equation}
+so the exterior vacuum field equations reduce exactly to those of GR.
+
+For numerical illustrations below we use the fiducial gate
+\begin{align}
+ \Gamma(\mathcal D,\zeta)
+ &=
+ \exp\Bigg[
+ -\ln2\Bigg(
+ \left(\frac{\mathcal D_-}{\mathcal D}\right)^{0.4}
+ +
+ \left(\frac{\mathcal D}{\mathcal D_+}\right)^{0.4}
+ +
+ \left(\frac{\zeta_\star}{\zeta}\right)^4
+ \Bigg)
+ \Bigg],
+ \label{eq:gate}
+\\
+ \mathcal D
+ &=
+ (8\pi\rho)^4\left(\frac{p}{\rho}\right)^3,
+ \\
+ \zeta
+ &=
+ \frac{(1-3p/\rho)^2}{1+3(p/\rho)^2},
+\end{align}
+with
+\begin{equation}
+ \mathcal D_-=10^{-11}\ {\rm km^{-8}},\qquad
+ \mathcal D_+=5\times10^{-9}\ {\rm km^{-8}},\qquad
+ \zeta_\star=0.08.
+ \label{eq:gateparams}
+\end{equation}
+This particular gate is a benchmark choice rather than a unique prediction of the
+framework.
+
+\section{Noether consistency}
+
+Let
+\begin{equation}
+ I_B[g,\psi]
+ =
+ \int \dd^4x\sqrt{-g}\,\Gamma B_{\mu\nu}B^{\mu\nu}.
+\end{equation}
+Its variation may be written
+\begin{equation}
+ \delta I_B
+ =
+ \int \dd^4x\sqrt{-g}
+ \left[
+ \frac12\calK^{\mu\nu}\delta g_{\mu\nu}
+ +
+ \calF_A\delta\psi^A
+ \right].
+ \label{eq:variation}
+\end{equation}
+For a matter representation based on scalar comoving coordinates, an infinitesimal
+diffeomorphism generated by $\xi^\mu$ gives
+\begin{equation}
+ \delta_\xi g_{\mu\nu}=2\nabla_{(\mu}\xi_{\nu)},\qquad
+ \delta_\xi\psi^A=\xi^\mu\nabla_\mu\psi^A.
+\end{equation}
+Diffeomorphism invariance of $I_B$, followed by integration by parts, gives the
+off-shell identity
+\begin{equation}
+ \boxed{
+ \nabla_\mu\calK^\mu{}_\nu
+ =
+ \calF_A\nabla_\nu\psi^A .
+ }
+ \label{eq:noether}
+\end{equation}
+Thus the TPV correction to the gravitational equation and the TPV force on matter are
+not independent modifications.  They are linked by the same generally covariant
+interaction.
+
+With conventions fixed by Eq.~\eqref{eq:variation}, the field equations may be written
+schematically as
+\begin{equation}
+ G_{\mu\nu}
+ =
+ \mpl^{-2}T_{\mu\nu}
+ +
+ \frac{\lambda}{2}\calK_{\mu\nu},
+ \label{eq:metricfield}
+\end{equation}
+together with the corrected matter equations
+\begin{equation}
+ \mathcal E_A^{(0)}
+ +
+ \frac{\mpl^2\lambda}{2}\calF_A
+ =0.
+ \label{eq:matterfield}
+\end{equation}
+Equation~\eqref{eq:noether} ensures compatibility of the matter equations with the
+contracted Bianchi identity.
+
+\section{Exact static GR sector}
+
+The central structural property of Eq.~\eqref{eq:SB} is the vanishing of the magnetic
+Weyl tensor in a static spacetime relative to the static observers.  In particular,
+\begin{equation}
+ B_{\mu\nu}=0
+ \label{eq:Bzero}
+\end{equation}
+for a static perfect-fluid configuration whose four-velocity is aligned with the static
+Killing congruence \cite{Hervik2012}.
+
+On such a background,
+\begin{equation}
+ \Gamma B_{\mu\nu}B^{\mu\nu}=0.
+\end{equation}
+Its first variation is also zero:
+\begin{align}
+ \delta\!\left(\Gamma B_{\mu\nu}B^{\mu\nu}\right)
+ &=
+ (\delta\Gamma)B_{\mu\nu}B^{\mu\nu}
+ +
+ 2\Gamma B^{\mu\nu}\delta B_{\mu\nu}
+ \nonumber\\
+ &=0.
+ \label{eq:firstvarzero}
+\end{align}
+Therefore
+\begin{equation}
+ \boxed{
+ \calK_{\mu\nu}=0,\qquad \calF_A=0
+ }
+ \label{eq:staticzero}
+\end{equation}
+on every such configuration.
+
+It follows immediately that
+\begin{equation}
+ \boxed{
+ \text{every static GR perfect-fluid solution is an exact active-TPV solution}.
+ }
+ \label{eq:staticthm}
+\end{equation}
+The Tolman--Oppenheimer--Volkoff mass--radius sequence is therefore unchanged for
+fixed equation of state.
+
+The same observation applies to a strictly static gravitoelectric tidal deformation.
+The deformed spacetime remains static and hence purely electric relative to its static
+matter congruence.  The $B^2$ operator vanishes identically, so the zero-frequency
+electric tidal Love number is unchanged:
+\begin{equation}
+ \boxed{
+ \Lambda_E^{\rm TPV}=\Lambda_E^{\rm GR}.
+ }
+ \label{eq:lovezero}
+\end{equation}
+This should not be confused with a statement about dynamical tides or gravitomagnetic
+Love numbers, where $B_{\mu\nu}$ need not vanish.  Standard relativistic electric Love
+numbers are reviewed, for example, in Refs.~\cite{Hinderer2008,BinningtonPoisson2009}.
+
+\section{Order-reduced effective dynamics}
+
+If Eq.~\eqref{eq:metricfield} is interpreted as an exact higher-derivative theory, a
+generic vortical matter frame can mix electric and magnetic Weyl components and expose
+higher time derivatives.  We therefore define active TPV perturbatively as an EFT.
+
+Collect the metric and matter fields into $\Phi^I$ and write the equations as
+\begin{equation}
+ \mathbb E_0[\Phi]
+ +
+ \lambda\,\mathbb E_B[\Phi]
+ =0,
+ \label{eq:fulleq}
+\end{equation}
+where $\mathbb E_0$ denotes the Einstein--fluid equations.  The low-energy branch is
+expanded as
+\begin{equation}
+ \Phi=\Phi_0+\lambda\Phi_1+O(\lambda^2).
+ \label{eq:phiexp}
+\end{equation}
+At successive orders,
+\begin{align}
+ \mathbb E_0[\Phi_0]&=0,
+ \label{eq:order0}\\
+ D\mathbb E_0[\Phi_0]\cdot\Phi_1
+ &=
+ -\mathbb E_B[\Phi_0].
+ \label{eq:order1}
+\end{align}
+Equation~\eqref{eq:order1} is the defining first-order TPV equation.
+
+The principal differential operator acting on the unknown correction $\Phi_1$ is exactly
+the ordinary linearized Einstein--fluid operator.  Higher derivatives generated by the
+$B^2$ operator occur only in the known source evaluated on $\Phi_0$.  The perturbative
+branch therefore requires no additional low-energy initial data beyond those of GR and
+the original fluid.
+
+This is the standard logic of perturbative constraints/reduction of order in
+higher-derivative EFTs \cite{Simon1990,ParkerSimon1993}.  The additional roots of the
+unreduced finite higher-derivative truncation are nonanalytic in the EFT coefficient and
+are not retained as physical low-energy solutions.  We do not claim that the unreduced
+fourth-order equations define a UV-complete fundamental theory.  Rather, the regime of
+interest is characterized schematically by
+\begin{equation}
+ |\lambda|\,\Gamma\,k^2\ll1,
+ \qquad
+ |\lambda|\,\Gamma\,|\mathcal R|\ll1,
+ \label{eq:EFTdomain}
+\end{equation}
+where $k$ and $\mathcal R$ are characteristic wave-number and curvature scales.
+Related work has shown that higher-derivative gravitational EFTs can admit well-posed
+formulations when the EFT corrections remain perturbatively small
+\cite{DaviesReall2022}.
+
+\section{Slow rotation}
+
+\subsection{GR background}
+
+For uniform slow rotation, adopt Hartle's metric at first order in angular velocity
+$\Omega$,
+\begin{equation}
+ \dd s^2
+ =
+ -N(r)^2\dd t^2
+ +
+ A(r)^2\dd r^2
+ +
+ r^2\left[
+ \dd\theta^2+
+ \sin^2\theta\left(\dd\phi-\omega(r)\dd t\right)^2
+ \right]
+ +O(\Omega^2).
+ \label{eq:hartlemetric}
+\end{equation}
+Define
+\begin{equation}
+ \bar\omega(r)\equiv\Omega-\omega(r),
+ \qquad
+ j(r)\equiv\frac{1}{N(r)A(r)}.
+\end{equation}
+On the exact GR spherical background, Hartle's first-order equation is
+\begin{equation}
+ \frac{\dd}{\dd r}
+ \left(
+ r^4j\frac{\dd\bar\omega}{\dd r}
+ \right)
+ +
+ 4r^3j'\bar\omega
+ =0.
+ \label{eq:hartle}
+\end{equation}
+The exterior solution is
+\begin{equation}
+ \bar\omega_{\rm ext}
+ =
+ \Omega-\frac{2J}{r^3},
+\end{equation}
+and
+\begin{equation}
+ I_{\rm GR}\equiv\frac{J}{\Omega}.
+\end{equation}
+These are the standard Hartle slow-rotation relations
+\cite{Hartle1967,HartleThorne1968}.
+
+\subsection{Magnetic-Weyl functional}
+
+To $O(\Omega)$ the magnetic Weyl tensor is nonzero.  After angular reduction, the
+quadratic TPV contribution can be written in terms of the GR frame-dragging solution as
+\begin{equation}
+ S_B^{(2)}
+ =
+ \pi\mpl^2\lambda
+ \int \dd t\,\dd r\,
+ \frac{\Gamma A r^2}{N}
+ \left[
+ \frac{\bar\omega'^2}{A^2}
+ +
+ \frac{8}{3}F[\bar\omega]^2
+ \right],
+ \label{eq:SB1d}
+\end{equation}
+where, after using the GR Hartle equation and TOV identities,
+\begin{equation}
+ F[\bar\omega]
+ =
+ -\frac{\bar\omega'}{2A^2}
+ +
+ \left(
+ \frac{3m}{r^2}
+ +
+ 4\pi r p
+ \right)\bar\omega .
+ \label{eq:Fdef}
+\end{equation}
+The response is therefore localized to matter through $\Gamma$ and vanishes exactly in
+the exterior.
+
+Write
+\begin{equation}
+ \bar\omega
+ =
+ \bar\omega_0+\lambda\bar\omega_1+O(\lambda^2),
+\end{equation}
+where $\bar\omega_0$ satisfies Eq.~\eqref{eq:hartle}.  The correction
+$\bar\omega_1$ obeys an inhomogeneous equation with the same Hartle operator:
+\begin{equation}
+ \calH[\bar\omega_1]
+ =
+ S_B[\bar\omega_0],
+ \qquad
+ \calH[y]\equiv(r^4jy')'+4r^3j'y.
+ \label{eq:inhomHartle}
+\end{equation}
+Thus no additional radial homogeneous mode or boundary condition is introduced at
+$O(\lambda)$.
+
+\subsection{Positive-definite moment-of-inertia correction}
+
+Self-adjointness of the Hartle operator and matching to the unchanged vacuum exterior
+give the leading correction
+\begin{align}
+ \Delta I
+ &=
+ \frac{\alpha_B}{4\Lambda_Q^2\Omega^2}
+ \int_0^R\dd r\,
+ \frac{\Gamma A r^2}{N}
+ \Bigg[
+ \frac{\bar\omega_0'^2}{A^2}
+ \nonumber\\
+ &\hspace{2.7cm}
+ +
+ \frac{8}{3}
+ \left(
+ -\frac{\bar\omega_0'}{2A^2}
+ +
+ \left[
+ \frac{3m}{r^2}+4\pi rp
+ \right]\bar\omega_0
+ \right)^2
+ \Bigg].
+ \label{eq:deltaI}
+\end{align}
+Every factor in the integrand is nonnegative for a regular stellar background if
+$\Gamma\ge0$.  Hence
+\begin{equation}
+ \boxed{
+ \alpha_B>0,\ \Gamma\ge0
+ \quad\Longrightarrow\quad
+ \Delta I>0
+ }
+ \label{eq:sign}
+\end{equation}
+unless the magnetic-Weyl response vanishes identically.
+
+This sign is an analytic prediction of the operator and does not depend on the detailed
+equation of state.
+
+\section{Numerical benchmark}
+
+The static background is ordinary GR by the theorem above.  For a reproducible
+illustration, we use the tabulated SLY4 equation of state distributed by LALSimulation;
+SLY4 is one of the named tabulated EOSs supported by LALSimulation
+\cite{LALSuite}.  For a $1.4\,M_\odot$ model we obtain
+\begin{equation}
+ R=11.7240\ {\rm km},
+ \qquad
+ I_{\rm GR}=101.4204\ {\rm km^3}.
+ \label{eq:benchmarkGR}
+\end{equation}
+The numerical values in this section are intended as an illustrative benchmark for the
+fiducial gate, not as a fit to current observational data.
+
+We take
+\begin{equation}
+ \Lambda_Q^2
+ =
+ 5.9333\times10^{-2}\ {\rm km^{-2}},
+ \qquad
+ \alpha_B=0.05,
+ \label{eq:benchmarkcoupling}
+\end{equation}
+together with Eqs.~\eqref{eq:gate}--\eqref{eq:gateparams}.  Integrating the TOV and
+Hartle equations and then evaluating Eq.~\eqref{eq:deltaI} yields
+\begin{equation}
+ \boxed{
+ \frac{\Delta I}{I_{\rm GR}}
+ =
+ 7.54\times10^{-4}
+ }
+ \label{eq:numericalshift}
+\end{equation}
+for the tabulated SLY4 benchmark.
+
+Thus
+\begin{equation}
+ I_{\rm TPV}
+ \simeq
+ I_{\rm GR}\left(1+7.54\times10^{-4}\right)
+\end{equation}
+at this parameter point.  The shift is small, as required for perturbative control, but
+nonzero.
+
+The appropriate stellar-scale derivative-expansion parameter is
+\begin{equation}
+ \epsilon_R
+ \sim
+ \frac{\alpha_B\Gamma_{\max}}
+ {\Lambda_Q^2 R^2},
+ \label{eq:epsR}
+\end{equation}
+which is of order a few $\times10^{-3}$ for the present benchmark.  This is consistent
+with treating Eq.~\eqref{eq:SB} as a perturbative correction.
+
+The numerical calculation may be performed in two equivalent ways:
+(i) direct evaluation of the positive-definite integral
+Eq.~\eqref{eq:deltaI}; and
+(ii) integration of the sourced equation Eq.~\eqref{eq:inhomHartle} followed by
+exterior matching.  Agreement of these implementations provides a useful internal
+check because they use the same physical perturbation but different numerical
+representations.
+
+\section{Observable structure}
+
+The active TPV operator produces a distinctive separation between static and
+gravitomagnetic stellar observables:
+\begin{align}
+ M(R)_{\rm TPV}
+ &=M(R)_{\rm GR},
+ \\
+ \Lambda_{E,\rm TPV}
+ &=\Lambda_{E,\rm GR},
+ \\
+ I_{\rm TPV}
+ &>I_{\rm GR}
+ \qquad(\alpha_B>0).
+ \label{eq:signature}
+\end{align}
+The first two equalities are exact within the theory defined by Eq.~\eqref{eq:action}
+for the static sectors described above; the third is the leading slow-rotation result.
+
+This pattern cannot be reproduced merely by replacing one static barotropic EOS with
+another while keeping the same static background and the same zero-frequency electric
+tidal response.  The new effect is tied specifically to the magnetic/tensor response of
+spacetime relative to moving matter.
+
+The result also motivates comparison with the GR I--Love--Q relations
+\cite{YagiYunes2013}.  Active TPV shifts $I$ while leaving the static electric Love
+number unchanged, so the GR I--Love relation is displaced at $O(\alpha_B)$.
+A complete prediction for the rotational quadrupole $Q$ requires the second-order
+Hartle--Thorne calculation discussed below.
+
+\section{The unresolved quadrupole calculation}
+
+At $O(\Omega^2)$, the ordinary Hartle--Thorne problem contains even-parity
+$l=0$ and $l=2$ deformations \cite{HartleThorne1968}.  Since the first-order magnetic
+Weyl tensor is $O(\Omega)$, the invariant $B^2$ is $O(\Omega^2)$ and contains only
+$l=0$ and $l=2$ angular structure.  However, the $P_2$ coefficient of $B^2$ is
+\emph{not} by itself the source of the $l=2$ metric equations.
+
+The correct $O(\alpha_B\Omega^2)$ source requires the complete metric and matter
+variation of
+\begin{equation}
+ \sqrt{-g}\,\Gamma B_{\mu\nu}B^{\mu\nu}
+\end{equation}
+through second order in rotation, followed by projection onto the Hartle--Thorne
+$l=2$ system.  This includes the direct curvature variation, the variation of the
+matter-frame four-velocity, and the corresponding TPV correction to the fluid
+equations.  The resulting interior solution must then be matched to the ordinary
+vacuum Hartle--Thorne exterior, which remains exactly GR because $\Gamma=0$ outside
+the star.
+
+We therefore do not quote a value for $\Delta Q$ in this work.  Any estimate based only
+on the angular decomposition of $B^2$ would omit parts of the variational source and
+would not constitute a controlled prediction.
+
+\section{Discussion}
+
+The construction presented here is intentionally modest in its claims.  It is not a
+microscopic model of vacuum constituents and does not provide a UV completion of
+gravity.  Rather, it is a covariant low-energy constitutive extension of GR designed to
+make the tensor response of a TPV physically active in matter while retaining an exact
+vacuum and static GR sector.
+
+Several properties distinguish the proposal from a generic curvature-squared
+modification:
+\begin{itemize}
+\item the operator is gated by matter and vanishes smoothly in vacuum;
+\item the timelike direction entering $B_{\mu\nu}$ is supplied by physical matter, not
+      by an independent preferred-frame field;
+\item the theory is defined perturbatively by reduction of order, so the physical branch
+      inherits the Einstein--fluid initial-data count;
+\item all static perfect-fluid backgrounds remain exact GR solutions;
+\item the leading rotational correction has a definite sign.
+\end{itemize}
+
+The benchmark size in Eq.~\eqref{eq:numericalshift} is small.  That is not a defect:
+the primary theoretical result is the existence of a controlled constitutive response
+that cannot be absorbed into a static EOS remapping.  Observational constraints and
+parameter inference require a broader survey over masses, EOSs, gate choices, and
+$\Lambda_Q$.
+
+The most important next calculations are:
+(i) the full $O(\alpha_B\Omega^2)$ quadrupole shift;
+(ii) dynamical and gravitomagnetic tidal responses;
+(iii) oscillation and gravitational-wave spectra using the same covariant EFT;
+(iv) a systematic hyperbolicity analysis of a chosen order-reduced gauge-fixed
+formulation; and
+(v) observational bounds on $\alpha_B/\Lambda_Q^2$.
+
+\section{Conclusion}
+
+We have constructed a physically active Tensor Polarizable Vacuum EFT in which the
+vacuum is identified with spacetime and the leading new constitutive response is
+\begin{equation}
+ \Gamma B_{\mu\nu}B^{\mu\nu}.
+\end{equation}
+The matter four-velocity determines the local magnetic-Weyl frame, while the gate
+confines the modification to material regions.
+
+Diffeomorphism covariance gives an exact Noether relation between the modified metric
+and matter equations.  Defining the theory perturbatively by reduction of order ensures
+that the $O(\alpha_B)$ corrections are governed by the ordinary linearized
+Einstein--fluid operator and therefore do not require additional low-energy initial
+data.
+
+The theory possesses an exact static GR sector.  In particular,
+\begin{equation}
+ B_{\mu\nu}=0
+\end{equation}
+for static stellar configurations, so the mass--radius relation and zero-frequency
+electric tidal Love number remain unchanged.  Rotation activates the response.  In
+Hartle's slow-rotation approximation the leading change in the moment of inertia is a
+positive-definite functional of the GR stellar solution.  Consequently,
+\begin{equation}
+ \alpha_B>0
+ \quad\Rightarrow\quad
+ I_{\rm TPV}>I_{\rm GR}.
+\end{equation}
+For the illustrative $1.4\,M_\odot$ SLY4 benchmark and fiducial coupling used here,
+the fractional shift is $7.54\times10^{-4}$.
+
+The resulting phenomenological pattern,
+\begin{equation}
+ \boxed{
+ \text{static GR response unchanged}
+ \quad+\quad
+ \text{modified gravitomagnetic response},
+ }
+\end{equation}
+is the principal result.  It provides a concrete example in which the ``tensor'' in
+Tensor Polarizable Vacuum becomes physically active without modifying the static
+stellar background or introducing a new retained low-energy gravitational branch.
+The rotational quadrupole and full I--Love--Q displacement remain important future
+tests of the framework.
+
+\begin{acknowledgments}
+The author thanks the developers of LALSuite for maintaining public neutron-star
+equation-of-state infrastructure used for the numerical benchmark.
+\end{acknowledgments}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Hartle1967}
+J.~B. Hartle,
+``Slowly Rotating Relativistic Stars. I. Equations of Structure,''
+Astrophys. J. \textbf{150}, 1005 (1967),
+doi:10.1086/149400.
+
+\bibitem{HartleThorne1968}
+J.~B. Hartle and K.~S. Thorne,
+``Slowly Rotating Relativistic Stars. II. Models for Neutron Stars and Supermassive Stars,''
+Astrophys. J. \textbf{153}, 807 (1968),
+doi:10.1086/149707.
+
+\bibitem{Brown1993}
+J.~D. Brown,
+``Action functionals for relativistic perfect fluids,''
+Class. Quantum Grav. \textbf{10}, 1579 (1993),
+doi:10.1088/0264-9381/10/8/017,
+arXiv:gr-qc/9304026.
+
+\bibitem{Simon1990}
+J.~Z. Simon,
+``Higher-derivative Lagrangians, nonlocality, problems, and solutions,''
+Phys. Rev. D \textbf{41}, 3720 (1990),
+doi:10.1103/PhysRevD.41.3720.
+
+\bibitem{ParkerSimon1993}
+L. Parker and J.~Z. Simon,
+``Einstein equation with quantum corrections reduced to second order,''
+Phys. Rev. D \textbf{47}, 1339 (1993),
+doi:10.1103/PhysRevD.47.1339.
+
+\bibitem{DaviesReall2022}
+I. Davies and H.~S. Reall,
+``Well-posed formulation of Einstein-Maxwell effective field theory,''
+Phys. Rev. D \textbf{106}, 104019 (2022),
+doi:10.1103/PhysRevD.106.104019.
+
+\bibitem{Hervik2012}
+S. Hervik, M. Ortaggio, and L. Wylleman,
+``Minimal tensors and purely electric or magnetic spacetimes of arbitrary dimension,''
+Class. Quantum Grav. (2013),
+arXiv:1203.3563 [gr-qc].
+
+\bibitem{Hinderer2008}
+T. Hinderer,
+``Tidal Love Numbers of Neutron Stars,''
+Astrophys. J. \textbf{677}, 1216 (2008),
+doi:10.1086/533487,
+arXiv:0711.2420.
+
+\bibitem{BinningtonPoisson2009}
+T. Binnington and E. Poisson,
+``Relativistic theory of tidal Love numbers,''
+Phys. Rev. D \textbf{80}, 084018 (2009),
+doi:10.1103/PhysRevD.80.084018,
+arXiv:0906.1366.
+
+\bibitem{YagiYunes2013}
+K. Yagi and N. Yunes,
+``I-Love-Q Relations in Neutron Stars and their Applications to Astrophysics,
+Gravitational Waves and Fundamental Physics,''
+Phys. Rev. D \textbf{88}, 023009 (2013),
+doi:10.1103/PhysRevD.88.023009,
+arXiv:1303.1528.
+
+\bibitem{OBoyle2020}
+M.~F. O'Boyle, C. Markakis, N. Stergioulas, and J.~S. Read,
+``Parametrized equation of state for neutron star matter with continuous sound speed,''
+Phys. Rev. D \textbf{102}, 083027 (2020),
+doi:10.1103/PhysRevD.102.083027,
+arXiv:2008.03342.
+
+\bibitem{LALSuite}
+LIGO Scientific Collaboration,
+``LIGO Algorithm Library---LALSuite,''
+free software (GPL) (2018),
+doi:10.7935/GT1W-FZ16.
+
+\end{thebibliography}
+
+
+\end{document}
