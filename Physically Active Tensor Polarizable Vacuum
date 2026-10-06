@@ -17,7 +17,7 @@
 \begin{document}
 
 \title{Physically Active Tensor Polarizable Vacuum:\\
-A Matter-Gated Gravitomagnetic Effective Theory and Neutron-Star Moment of Inertia}
+A Matter-Gated Gravitomagnetic Effective Theory for Neutron-Star Rotation}
 
 \author{Jacob G. Simmerman}
 \affiliation{Independent Researcher}
@@ -51,13 +51,18 @@ is also an exact TPV solution, and the zero-frequency gravitoelectric tidal resp
 unchanged.  Rotation activates the new constitutive sector.  In the Hartle slow-rotation
 limit we derive a positive-definite first-order correction to the stellar moment of
 inertia.  For $\alpha_B>0$ and a nonnegative gate, the correction obeys
-$\Delta I>0$ analytically.  An illustrative $1.4\,M_\odot$ tabulated SLY4 benchmark
-with $R=11.7240\,{\rm km}$ and $I_{\rm GR}=101.4204\,{\rm km^3}$ gives
-$\Delta I/I_{\rm GR}=7.54\times10^{-4}$ at $\alpha_B=0.05$ for the fiducial gate and
-$\Lambda_Q$ used here.  The theory therefore leaves the static mass--radius and
-gravitoelectric tidal sectors unchanged while modifying the gravitomagnetic response
-of rotating matter.  We discuss the EFT domain, limitations, and the outstanding
-second-order rotational quadrupole calculation.
+$\Delta I>0$ analytically.  We also complete the
+$O(\alpha_B\Omega^2)$, $l=2$ Hartle--Thorne response, including the off-diagonal and
+trace-free angular constraints and the matter-gate contribution.  For an illustrative
+$1.4\,M_\odot$ smooth-SLy4 benchmark with
+$R=11.6269\,{\rm km}$ and $I_{\rm GR}=100.2907\,{\rm km^3}$, the fiducial point
+$\alpha_B=0.05$ gives
+$\Delta I/I_{\rm GR}=7.94\times10^{-4}$ and
+$\Delta Q/Q=(1.066\pm0.005)\times10^{-3}$ in Hartle's positive quadrupole-magnitude
+convention.  The normalized quadrupole
+$\bar Q\equiv QM/J^2$ changes by $-5.21\times10^{-4}$.  Thus the theory leaves the
+static mass--radius and gravitoelectric tidal sectors unchanged while modifying both
+first- and second-order rotational response.
 \end{abstract}
 
 \maketitle
@@ -109,14 +114,16 @@ Our central results are:
 \item an order-reduced field equation whose principal operator is the ordinary
       linearized Einstein--fluid operator;
 \item a positive-definite slow-rotation correction to the moment of inertia, implying
-      $\Delta I>0$ for $\alpha_B>0$ and $\Gamma\ge 0$.
+      $\Delta I>0$ for $\alpha_B>0$ and $\Gamma\ge 0$;
+\item a complete leading $O(\alpha_B\Omega^2)$ quadrupolar response for a benchmark
+      neutron star, obtained by sourcing the ordinary Hartle--Thorne $l=2$ system and
+      matching to the unchanged GR exterior.
 \end{enumerate}
 
-The rotational quadrupole $Q$ is deliberately not reported here.  Its
-$O(\alpha_B\Omega^2)$ computation requires the complete $l=2$ variation of the
-matter-gated $B^2$ operator, not merely the $P_2$ component of $B^2$ itself.  We regard
-that calculation as a natural extension rather than a prerequisite for the results
-presented below.
+The quadrupole calculation is performed from the full variational source rather than
+from the $P_2$ coefficient of $B^2$ alone.  In particular, the $r\theta$ constraint,
+the trace-free angular constraint, and the TPV modification of the fluid first integral
+must all be retained.
 
 Throughout we use $G=c=1$ and metric signature $(-,+,+,+)$.
 
@@ -533,18 +540,21 @@ equation of state.
 
 \section{Numerical benchmark}
 
-The static background is ordinary GR by the theorem above.  For a reproducible
-illustration, we use the tabulated SLY4 equation of state distributed by LALSimulation;
-SLY4 is one of the named tabulated EOSs supported by LALSimulation
-\cite{LALSuite}.  For a $1.4\,M_\odot$ model we obtain
+For the quadrupole calculation we use a smooth generalized piecewise-polytropic
+representation of SLy4 with continuous sound speed, following the GPP construction of
+O'Boyle \emph{et al.}~\cite{OBoyle2020}.  The static background is an ordinary GR
+solution by Eq.~\eqref{eq:staticthm}.  For the $1.4\,M_\odot$ benchmark we obtain
 \begin{equation}
- R=11.7240\ {\rm km},
+ M=1.4000000\,M_\odot,\qquad
+ R=11.6269\ {\rm km},
  \qquad
- I_{\rm GR}=101.4204\ {\rm km^3}.
+ I_{\rm GR}=100.2907\ {\rm km^3}.
  \label{eq:benchmarkGR}
 \end{equation}
-The numerical values in this section are intended as an illustrative benchmark for the
-fiducial gate, not as a fit to current observational data.
+The corresponding dimensionless moment of inertia is
+\begin{equation}
+ \bar I_{\rm GR}\equiv\frac{I_{\rm GR}}{M^3}=11.3508.
+\end{equation}
 
 We take
 \begin{equation}
@@ -555,45 +565,34 @@ We take
  \alpha_B=0.05,
  \label{eq:benchmarkcoupling}
 \end{equation}
-together with Eqs.~\eqref{eq:gate}--\eqref{eq:gateparams}.  Integrating the TOV and
-Hartle equations and then evaluating Eq.~\eqref{eq:deltaI} yields
+together with Eqs.~\eqref{eq:gate}--\eqref{eq:gateparams}.  Integrating the GR TOV
+and Hartle equations and evaluating Eq.~\eqref{eq:deltaI} gives
 \begin{equation}
  \boxed{
  \frac{\Delta I}{I_{\rm GR}}
  =
- 7.54\times10^{-4}
+ 7.936\times10^{-4}
  }
  \label{eq:numericalshift}
 \end{equation}
-for the tabulated SLY4 benchmark.
+at the fiducial point.
 
-Thus
-\begin{equation}
- I_{\rm TPV}
- \simeq
- I_{\rm GR}\left(1+7.54\times10^{-4}\right)
-\end{equation}
-at this parameter point.  The shift is small, as required for perturbative control, but
-nonzero.
+The calculation was implemented in two forms: direct evaluation of the
+positive-definite integral Eq.~\eqref{eq:deltaI}, and direct integration of the
+inhomogeneous Hartle equation Eq.~\eqref{eq:inhomHartle} followed by exterior
+matching.  The agreement of the two implementations is used as an internal check of
+the first-order rotational sector.
 
-The appropriate stellar-scale derivative-expansion parameter is
+The stellar-scale derivative-expansion parameter is
 \begin{equation}
  \epsilon_R
  \sim
  \frac{\alpha_B\Gamma_{\max}}
- {\Lambda_Q^2 R^2},
+ {\Lambda_Q^2R^2},
  \label{eq:epsR}
 \end{equation}
-which is of order a few $\times10^{-3}$ for the present benchmark.  This is consistent
-with treating Eq.~\eqref{eq:SB} as a perturbative correction.
-
-The numerical calculation may be performed in two equivalent ways:
-(i) direct evaluation of the positive-definite integral
-Eq.~\eqref{eq:deltaI}; and
-(ii) integration of the sourced equation Eq.~\eqref{eq:inhomHartle} followed by
-exterior matching.  Agreement of these implementations provides a useful internal
-check because they use the same physical perturbation but different numerical
-representations.
+which is of order a few $\times10^{-3}$ for the benchmark.  The rotational
+calculation is therefore well inside the intended perturbative regime.
 
 \section{Observable structure}
 
@@ -611,43 +610,155 @@ gravitomagnetic stellar observables:
  \qquad(\alpha_B>0).
  \label{eq:signature}
 \end{align}
-The first two equalities are exact within the theory defined by Eq.~\eqref{eq:action}
-for the static sectors described above; the third is the leading slow-rotation result.
+The first two equalities are exact for the static sectors described above; the third is
+the leading slow-rotation result.
 
 This pattern cannot be reproduced merely by replacing one static barotropic EOS with
 another while keeping the same static background and the same zero-frequency electric
 tidal response.  The new effect is tied specifically to the magnetic/tensor response of
 spacetime relative to moving matter.
 
-The result also motivates comparison with the GR I--Love--Q relations
-\cite{YagiYunes2013}.  Active TPV shifts $I$ while leaving the static electric Love
-number unchanged, so the GR I--Love relation is displaced at $O(\alpha_B)$.
-A complete prediction for the rotational quadrupole $Q$ requires the second-order
-Hartle--Thorne calculation discussed below.
+\section{Spin-induced quadrupole}
 
-\section{The unresolved quadrupole calculation}
+\subsection{Hartle--Thorne response problem}
 
-At $O(\Omega^2)$, the ordinary Hartle--Thorne problem contains even-parity
-$l=0$ and $l=2$ deformations \cite{HartleThorne1968}.  Since the first-order magnetic
-Weyl tensor is $O(\Omega)$, the invariant $B^2$ is $O(\Omega^2)$ and contains only
-$l=0$ and $l=2$ angular structure.  However, the $P_2$ coefficient of $B^2$ is
-\emph{not} by itself the source of the $l=2$ metric equations.
-
-The correct $O(\alpha_B\Omega^2)$ source requires the complete metric and matter
+At $O(\Omega^2)$ the standard Hartle--Thorne problem contains even-parity
+$l=0$ and $l=2$ deformations~\cite{Hartle1967,HartleThorne1968}.  The first-order
+magnetic Weyl tensor is $O(\Omega)$, so $B^2$ is $O(\Omega^2)$ and contains only
+$l=0$ and $l=2$ angular structure.  The quadrupole source, however, is the complete
 variation of
 \begin{equation}
- \sqrt{-g}\,\Gamma B_{\mu\nu}B^{\mu\nu}
+ \sqrt{-g}\,\Gamma B_{\mu\nu}B^{\mu\nu},
 \end{equation}
-through second order in rotation, followed by projection onto the Hartle--Thorne
-$l=2$ system.  This includes the direct curvature variation, the variation of the
-matter-frame four-velocity, and the corresponding TPV correction to the fluid
-equations.  The resulting interior solution must then be matched to the ordinary
-vacuum Hartle--Thorne exterior, which remains exactly GR because $\Gamma=0$ outside
-the star.
+not simply the $P_2$ coefficient of $B^2$.
 
-We therefore do not quote a value for $\Delta Q$ in this work.  Any estimate based only
-on the angular decomposition of $B^2$ would omit parts of the variational source and
-would not constitute a controlled prediction.
+We therefore expand the action with respect to the independent $l=2$ metric
+perturbations and retain the corresponding off-diagonal $r\theta$ and trace-free
+angular constraints.  The matter-frame normalization and the gate variation are
+included simultaneously.  In the fluid sector the TPV term modifies the rigid-rotation
+first integral.  These contributions provide a compact interior source for the
+ordinary GR Hartle--Thorne $l=2$ operator.
+
+Because $\Gamma=0$ in vacuum, the exterior remains exactly the GR Hartle--Thorne
+solution.  In Hartle's convention it may be parameterized by $J$ and a second exterior
+constant $K$, with the quadrupole magnitude
+\begin{equation}
+ Q=\frac{J^2}{M}+\frac{8}{5}KM^3.
+ \label{eq:QHartle}
+\end{equation}
+Writing
+\begin{equation}
+ J=J_0+\lambda J_1,\qquad
+ K=K_0+\lambda K_1,
+\end{equation}
+gives
+\begin{equation}
+ Q_1=
+ \frac{2J_0J_1}{M}
+ +\frac{8}{5}M^3K_1.
+ \label{eq:Q1}
+\end{equation}
+
+\subsection{Baseline validation}
+
+Before adding the TPV source, the reconstructed GR $l=2$ solver gives
+\begin{equation}
+ \boxed{\bar Q_{\rm GR}=4.96928},
+ \qquad
+ \bar Q\equiv\frac{QM}{J^2}.
+ \label{eq:qbargr}
+\end{equation}
+For the same star $\bar I_{\rm GR}=11.3508$.  This is consistent with the standard
+slow-rotation I--Q relation of Yagi and Yunes~\cite{YagiYunes2013} and provides an
+independent validation of the GR Hartle--Thorne implementation.
+
+\subsection{TPV quadrupole shift}
+
+The full sourced calculation gives, per unit $\lambda$ in the normalization used for
+the slow-rotation integration,
+\begin{equation}
+ K_1=1.516,
+\end{equation}
+and
+\begin{equation}
+ Q_1=30.59.
+\end{equation}
+At the fiducial coupling Eq.~\eqref{eq:benchmarkcoupling},
+\begin{equation}
+ \boxed{
+ \frac{\Delta Q}{Q}
+ =
+ (1.066\pm0.005)\times10^{-3}.
+ }
+ \label{eq:deltaQ}
+\end{equation}
+The sign convention in Eq.~\eqref{eq:deltaQ} is Hartle's positive quadrupole-magnitude
+convention.  The quoted uncertainty is a numerical source-generation and convergence
+estimate; it is not an EFT truncation, EOS, or gate-model uncertainty.
+
+Three independent finite-difference source resolutions give
+\begin{equation}
+ 1.0629,\quad1.0673,\quad1.0662
+ \qquad\times10^{-3},
+\end{equation}
+and variation of the inner integration radius gives a substantially smaller change.
+The source also satisfies the regular-center STF relations among the radial,
+$r\theta$, and trace-free angular components.
+
+The physical quadrupole magnitude therefore increases at fixed $\Omega$.  However,
+the normalized quadrupole behaves differently because
+$J=I\Omega$ also increases.  To first order,
+\begin{equation}
+ \frac{\Delta\bar Q}{\bar Q}
+ =
+ \frac{\Delta Q}{Q}
+ -
+ 2\frac{\Delta I}{I},
+\end{equation}
+and hence
+\begin{equation}
+ \boxed{
+ \frac{\Delta\bar Q}{\bar Q}
+ =
+ -5.21\times10^{-4},
+ \qquad
+ \bar Q_{\rm TPV}\simeq4.96669.
+ }
+ \label{eq:deltaqbar}
+\end{equation}
+
+The physical $Q$ shift may be decomposed linearly into three contributions:
+\begin{align}
+ \left.\frac{\Delta Q}{Q}\right|_{\delta\omega}
+ &\simeq +4.26\times10^{-4},\\
+ \left.\frac{\Delta Q}{Q}\right|_{\rm direct\ metric}
+ &\simeq +7.45\times10^{-4},\\
+ \left.\frac{\Delta Q}{Q}\right|_{\rm fluid/gate}
+ &\simeq -1.05\times10^{-4}.
+\end{align}
+Their sum reproduces Eq.~\eqref{eq:deltaQ} within the numerical integration error.
+
+\subsection{I--Love--Q displacement}
+
+Active TPV therefore modifies both rotational members of the I--Love--Q trio while
+leaving the zero-frequency electric Love number unchanged.  At the benchmark,
+\begin{equation}
+ \frac{\Delta\bar I}{\bar I}=+7.94\times10^{-4},
+ \qquad
+ \frac{\Delta\bar Q}{\bar Q}=-5.21\times10^{-4}.
+\end{equation}
+Linearizing the central GR I--Q fit of Ref.~\cite{YagiYunes2013} at the benchmark
+would instead associate the measured $\Delta\bar I$ with a normalized quadrupole
+change of approximately $+9.91\times10^{-4}$.  The TPV point is therefore displaced
+from that central GR fit by approximately
+\begin{equation}
+ \Delta\ln\bar Q\big|_{\rm TPV-GR\ fit}
+ \simeq-1.51\times10^{-3}.
+ \label{eq:IQdisp}
+\end{equation}
+This comparison is a theoretical diagnostic; determining whether such a displacement is
+observationally resolvable requires a separate analysis of EOS scatter and measurement
+uncertainties.
 
 \section{Discussion}
 
@@ -676,7 +787,8 @@ parameter inference require a broader survey over masses, EOSs, gate choices, an
 $\Lambda_Q$.
 
 The most important next calculations are:
-(i) the full $O(\alpha_B\Omega^2)$ quadrupole shift;
+(i) an independent symbolic or automatic-differentiation reconstruction of the
+$l=2$ TPV source and a projected Noether/gauge-consistency check;
 (ii) dynamical and gravitomagnetic tidal responses;
 (iii) oscillation and gravitational-wave spectra using the same covariant EFT;
 (iv) a systematic hyperbolicity analysis of a chosen order-reduced gauge-fixed
@@ -712,27 +824,28 @@ positive-definite functional of the GR stellar solution.  Consequently,
  \quad\Rightarrow\quad
  I_{\rm TPV}>I_{\rm GR}.
 \end{equation}
-For the illustrative $1.4\,M_\odot$ SLY4 benchmark and fiducial coupling used here,
-the fractional shift is $7.54\times10^{-4}$.
+For the illustrative $1.4\,M_\odot$ smooth-SLy4 benchmark and fiducial coupling
+used here, the moment-of-inertia shift is
+$7.94\times10^{-4}$.  The completed $l=2$ calculation gives
+$\Delta Q/Q=(1.066\pm0.005)\times10^{-3}$ and
+$\Delta\bar Q/\bar Q=-5.21\times10^{-4}$.
 
 The resulting phenomenological pattern,
 \begin{equation}
  \boxed{
  \text{static GR response unchanged}
  \quad+\quad
- \text{modified gravitomagnetic response},
+ \text{modified rotational tensor response},
  }
 \end{equation}
 is the principal result.  It provides a concrete example in which the ``tensor'' in
 Tensor Polarizable Vacuum becomes physically active without modifying the static
 stellar background or introducing a new retained low-energy gravitational branch.
-The rotational quadrupole and full I--Love--Q displacement remain important future
-tests of the framework.
+The benchmark is displaced from the central GR I--Q relation while retaining the GR
+zero-frequency electric Love number.  An independent symbolic reconstruction of the
+second-order TPV source remains desirable before precision phenomenology, but the
+leading slow-rotation quadrupole response is numerically closed.
 
-\begin{acknowledgments}
-The author thanks the developers of LALSuite for maintaining public neutron-star
-equation-of-state infrastructure used for the numerical benchmark.
-\end{acknowledgments}
 
 
 \begin{thebibliography}{99}
@@ -814,6 +927,11 @@ LIGO Scientific Collaboration,
 ``LIGO Algorithm Library---LALSuite,''
 free software (GPL) (2018),
 doi:10.7935/GT1W-FZ16.
+
+\end{thebibliography}
+
+
+\end{document}
 
 \end{thebibliography}
 
